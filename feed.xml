@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://danu.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danu.dev/" rel="alternate" type="text/html" /><updated>2022-02-20T00:48:12+09:00</updated><id>https://danu.dev/feed.xml</id><title type="html">DANU Dev</title><subtitle>DANU's Devlog</subtitle><author><name>이단우</name></author><entry><title type="html">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</title><link href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1</id><content type="html" xml:base="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://danu.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danu.dev/" rel="alternate" type="text/html" /><updated>2022-02-20T00:52:49+09:00</updated><id>https://danu.dev/feed.xml</id><title type="html">DANU Dev</title><subtitle>DANU's Devlog</subtitle><author><name>이단우</name></author><entry><title type="html">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</title><link href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1</id><content type="html" xml:base="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/">&lt;blockquote&gt;
   &lt;h2 id=&quot;서론&quot;&gt;서론&lt;/h2&gt;
 
   &lt;p&gt;M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.&lt;/p&gt;
@@ -16,7 +16,7 @@
   &lt;li&gt;&lt;a href=&quot;https://brew.sh&quot;&gt;brew.sh&lt;/a&gt;로 이동한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-1.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-1.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -26,23 +26,23 @@
 &lt;/ul&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-2.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-2.png&quot; /&gt;
 &lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-3.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-3.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;그러면 비밀번호를 입력하라고 뜬다. 맥의 비밀번호를 입력해주자.&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-4.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-4.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;진행을 계속 하고싶으면 RETURN(엔터) 키를 누르라고 한다. 눌러주자.&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-5.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-5.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;빠르게 설치가 진행되고나면, 가장 아래의 Next steps에서 해야 할 일을 알려준다.&lt;/center&gt;
 
@@ -52,14 +52,14 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 커맨드 역시 다를 수 있으니, 본인 터미널에 뜬 커맨드를 복사해서 붙여넣자!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-6.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-6.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;' &amp;gt;&amp;gt; /Users/사용자이름/.zprofile
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-7.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-7.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
@@ -70,14 +70,14 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 시키는대로만 잘 따라했으면 특별히 안 될 이유는 없을 것이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-8.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-8.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-9.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-9.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;이렇게 뜬다면 잘 된것이다.&lt;/center&gt;
 
@@ -85,14 +85,14 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;Homebrew를 통해 visual studio code (vscode라고 흔히 부르는)와 iterm2를 설치해보겠다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-10.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-10.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install --cask visual-studio-cde iterm2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-11.png&quot; width=&quot;500px&quot; height=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-11.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;설치도 잘 되었다!&lt;/center&gt;</content><author><name>이단우</name></author><category term="맥 OS" /><category term="홈브루" /><category term="환경설정" /><summary type="html">서론 M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.</summary></entry><entry><title type="html">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</title><link href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-2/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-2</id><content type="html" xml:base="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-2/">&lt;blockquote&gt;
   &lt;h2 id=&quot;서론&quot;&gt;서론&lt;/h2&gt;
