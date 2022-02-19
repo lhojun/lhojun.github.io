@@ -1,0 +1,926 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정 - DANU Dev</title>
+<meta name="description" content="서론    M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.    iTerm2 설치 및 설정    난 원래 순정 터미널 사용자였지만, 기왕 맥북을 바꾼김에 터미널도 새것처럼 써보자 싶어서 유명한 iTerm2를 깔고 설정을 하게 되었다. 사실 이전에도 몇번 쓰려고 시도해봤는데 생각보다 내가 꾸며놓은게 마음에 들지 않아서 몇번 하차했다가 이번엔 꽤 오래 탑승중이라서 글로 쓰게 되었다. 참고로 이 글은 ‘노마드코더’의 ‘개발자를 위한 M1 풀옵션 맥북프로 세팅!’ 영상을 보고 따라했다! 디테일한 설정만 본인의 취향에 따라 설정하고, 전체적인 진행과정은 같기때문에 영상을 보고 하는 것도 추천한다! (고마워요 니콜라스형!)    이 글은 아래 과정을 진행했다는 가정하에 진행된다.    Homebrew가 안깔려있다면 꼭 아래 글을 보고 깔고 오자!         M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치">
+
+
+  <meta name="author" content="이단우">
+  
+  <meta property="article:author" content="이단우">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="DANU Dev">
+<meta property="og:title" content="M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정">
+<meta property="og:url" content="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-2/">
+
+
+  <meta property="og:description" content="서론    M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.    iTerm2 설치 및 설정    난 원래 순정 터미널 사용자였지만, 기왕 맥북을 바꾼김에 터미널도 새것처럼 써보자 싶어서 유명한 iTerm2를 깔고 설정을 하게 되었다. 사실 이전에도 몇번 쓰려고 시도해봤는데 생각보다 내가 꾸며놓은게 마음에 들지 않아서 몇번 하차했다가 이번엔 꽤 오래 탑승중이라서 글로 쓰게 되었다. 참고로 이 글은 ‘노마드코더’의 ‘개발자를 위한 M1 풀옵션 맥북프로 세팅!’ 영상을 보고 따라했다! 디테일한 설정만 본인의 취향에 따라 설정하고, 전체적인 진행과정은 같기때문에 영상을 보고 하는 것도 추천한다! (고마워요 니콜라스형!)    이 글은 아래 과정을 진행했다는 가정하에 진행된다.    Homebrew가 안깔려있다면 꼭 아래 글을 보고 깔고 오자!         M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-02-19T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-2/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "DANU",
+      "url": "https://danu.dev/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="/assets/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          DANU Dev
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">카테고리</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://danu.dev/">
+        <img src="/assets/images/avatar.png" alt="이단우" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://danu.dev/" itemprop="url">이단우</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>DANU’s Devlog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Dong-A University</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:ldgs3324@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/lhojun" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+
+    
+  
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">카테고리</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <ul>
+      <li>
+            <a href="/categories/" class="">전체(4)</a>
+      </li>
+      </ul>
+      <li>
+        <span class="nav__sub-title">개발</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                        <li><a href="/categories/macos" class="">맥 OS (4)</a></li>
+                    
+                
+            </ul>
+      </li>
+      <li>
+        <span class="nav__sub-title">연구</span>
+            <ul>
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+            </ul>
+      </li>
+      <li>
+        <span class="nav__sub-title">일상</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                
+                    
+                
+            </ul>
+      </li>
+  </ul>
+</nav>
+
+  
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정">
+    <meta itemprop="description" content="  서론  M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.  iTerm2 설치 및 설정  난 원래 순정 터미널 사용자였지만, 기왕 맥북을 바꾼김에 터미널도 새것처럼 써보자 싶어서 유명한 iTerm2를 깔고 설정을 하게 되었다. 사실 이전에도 몇번 쓰려고 시도해봤는데 생각보다 내가 꾸며놓은게 마음에 들지 않아서 몇번 하차했다가 이번엔 꽤 오래 탑승중이라서 글로 쓰게 되었다. 참고로 이 글은 ‘노마드코더’의 ‘개발자를 위한 M1 풀옵션 맥북프로 세팅!’ 영상을 보고 따라했다! 디테일한 설정만 본인의 취향에 따라 설정하고, 전체적인 진행과정은 같기때문에 영상을 보고 하는 것도 추천한다! (고마워요 니콜라스형!)  이 글은 아래 과정을 진행했다는 가정하에 진행된다.  Homebrew가 안깔려있다면 꼭 아래 글을 보고 깔고 오자!      M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치  ">
+    <meta itemprop="datePublished" content="2022-02-19T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-2/" class="u-url" itemprop="url">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <blockquote>
+  <h2 id="서론">서론</h2>
+
+  <p>M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.</p>
+
+  <h3 id="iterm2-설치-및-설정">iTerm2 설치 및 설정</h3>
+
+  <p>난 원래 순정 터미널 사용자였지만, 기왕 맥북을 바꾼김에 터미널도 새것처럼 써보자 싶어서 유명한 iTerm2를 깔고 설정을 하게 되었다. 사실 이전에도 몇번 쓰려고 시도해봤는데 생각보다 내가 꾸며놓은게 마음에 들지 않아서 몇번 하차했다가 이번엔 꽤 오래 탑승중이라서 글로 쓰게 되었다. 참고로 이 글은 ‘노마드코더’의 ‘<a href="https://youtu.be/B26yiuC5zPM">개발자를 위한 M1 풀옵션 맥북프로 세팅!</a>’ 영상을 보고 따라했다! 디테일한 설정만 본인의 취향에 따라 설정하고, 전체적인 진행과정은 같기때문에 영상을 보고 하는 것도 추천한다! (고마워요 니콜라스형!)</p>
+
+  <h3 id="이-글은-아래-과정을-진행했다는-가정하에-진행된다">이 글은 아래 과정을 진행했다는 가정하에 진행된다.</h3>
+
+  <p>Homebrew가 안깔려있다면 꼭 아래 글을 보고 깔고 오자!</p>
+
+  <ul>
+    <li><a href="/맥 OS/Mac-OS-settings-1">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</a></li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>iTerm2를 설치하자! (Homebrew 글 마지막에서 설치 과정을 따라한 사람은 생략해도 된다!)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install --cask iterm2
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-1.png" />
+</p>
+
+<ul>
+  <li>설치가 완료되면 iTerm2를 실행하자.</li>
+</ul>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-2.png" />
+</p>
+<center>아주 밋밋하다.</center>
+
+<ul>
+  <li>커맨드(⌘ Command) 키와 쉼표(,)키를 눌러서 환경설정을 열어보자!</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-3.png" />
+</p>
+
+<ul>
+  <li>Appearance 탭으로 이동하자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-4.png" />
+</p>
+
+<ul>
+  <li>Theme를 Minimal로 바꿔준다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-5.png" />
+</p>
+
+<ul>
+  <li>Profiles탭으로 이동하자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-6.png" />
+</p>
+
+<ul>
+  <li>Profiles내의 탭들중에서 Session으로 이동하자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-7.png" />
+</p>
+
+<ul>
+  <li>가장 하단의 Status bar enabled를 체크해준다. (iTerm2에서 상태바를 볼 수 있다.)</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-8.png" />
+</p>
+
+<ul>
+  <li>체크 후 바로 옆의 Configure Status Bar로 들어가면 보이는 화면이다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-9.png" />
+</p>
+
+<ul>
+  <li>본인이 보고싶은 상태들을 드래그해서 옮기고, 하단의 Auto-Rainbow에서 Color Theme를 설정할 수 있다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-10.png" />
+</p>
+<center>나같은 경우는 현재 디렉토리 정보, git 상태, CPU 사용량을 담았다. 본인의 취향에 따라 담으면 된다.</center>
+<center>Auto-Rainbow는 Automatic으로 설정해주었다.</center>
+
+<ul>
+  <li>이제 iTerm2의 컬러테마를 설정해주자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-11.png" />
+</p>
+<center><a href="https://iterm2colorschemes.com" target="_blank">iterm2colorschemes.com</a>으로 이동해준다. iTerm2의 컬러테마를 무수히 공유해주고 있는 사이트이다.</center>
+
+<ul>
+  <li>본인이 마음에 드는 컬러테마를 선택하자. 난 Github Dark를 선택했다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-12.png" />
+</p>
+
+<ul>
+  <li>마음에 드는 컬러테마 이름의 링크를 누르고 들어가면 이런 XML들이 뜬다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-13.png" />
+</p>
+
+<ul>
+  <li>해당 파일을 찾기 쉬운 곳에 저장하자. 사파리 기준으로 커맨드(⌘ Command) 키와 알파벳 s(S)키를 누르면 쉽다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-14.png" />
+</p>
+
+<ul>
+  <li>이렇게 txt 파일로 저장이 된다. (굳이 txt파일로 안되었더라도, 아까 사이트에서 본 내용만 깔끔하게 담겨있다면 문제 없다.)</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-15.png" />
+</p>
+
+<ul>
+  <li>확장자를 txt에서 itermcolors로 바꾸어주자. iTerm2의 컬러테마 파일 확장자이다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-16.png" />
+</p>
+
+<ul>
+  <li>.itermcolors 사용을 눌러주자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-17.png" width="500px" />
+</p>
+<center>참고로 이 알림이 안뜬다면 (아주 높은 확률로) 확장자를 바꾼게 아니라 파일 이름만 바꾸었을 가능성이 크다.</center>
+<center>그럴 땐 파일을 '우클릭 &gt; 정보 가져오기 &gt; 이름 및 확장자'에서 바로 바꾸어주거나, 확장자 가리기를 체크 해제하고 다시 바꾸면 된다.</center>
+
+<ul>
+  <li>잘 바뀌었다!</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-18.png" />
+</p>
+
+<ul>
+  <li>다시 iTerm2로 돌아와서 Profiles 내의 Colors탭을 선택하고, 방금 받은 컬러테마 파일을 여기로 드래그해주자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-19.png" />
+</p>
+
+<ul>
+  <li>그러면 Colors Scheme이 import되었다고 알려준다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-20.png" width="500px" />
+</p>
+
+<ul>
+  <li>우측 하단의 Color Presets…를 눌러보면 방금 넣은 ‘GitHub Dark’(혹은 본인이 받은 컬러테마 이름)이 추가되어있다. 클릭해주자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-21.png" width="500px" />
+</p>
+
+<ul>
+  <li>그럼 색들이 바뀌어서 적용이 된다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-22.png" />
+</p>
+
+<ul>
+  <li>이제 환경설정은 끄고, iTerm2로 돌아가보자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-23.png" />
+</p>
+<center>아까보다 뭐가 많이 깔끔해졌다. 하지만 끝이 아니다.</center>
+
+<ul>
+  <li>oh-my-zsh를 깔아주자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-24.png" />
+</p>
+<center><a href="https://ohmyz.sh" target="_blank">oh-my-zsh 공식 홈페이지</a>로 이동해준다.</center>
+<center>oh-my-zsh는 zsh의 설정을 조금 더 쉽게 관리하기 위한 프레임워크이다.</center>
+<center>플러그인이나 여러 테마를 적용할 수 있어 더 편리하게 사용 할 수 있다.</center>
+<center>맥 OS 카탈리나 이후부터는 터미널에서 zsh가 기본 설정으로 사용되지만,</center>
+<center>여전히 많은 사람들이 더 편리한 사용을 위해 oh-my-zsh를 설치하고있다.</center>
+<center><b>누가봐도 눌러야 할 것 같이 생긴 Install oh-my-zsh를 눌러주자.</b></center>
+
+<ul>
+  <li>설치를 할 수 있는 커맨드가 보인다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-25.png" />
+</p>
+
+<ul>
+  <li>iTerm2에 붙여 넣어주자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-26.png" />
+</p>
+<center>글을 쓰는 현재는 위와 같지만 달라질 수 있으니 홈페이지를 신뢰하자.</center>
+
+<ul>
+  <li>억겁의 시간이 흐르고 나면 누가봐도 oh-my-zsh가 설치된 것 같은 화면이 보인다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-27.png" />
+</p>
+<center>KTX 타고 가면서 봐도 설치된 걸 알 수 있을 수준</center>
+
+<ul>
+  <li>그 다음으로 powerlevel10k를 설치해보자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-28.png" />
+</p>
+<center><a href="https://github.com/romkatv/powerlevel10k" target="_blank">powerlevel10k</a> 깃허브로 이동해준다.</center>
+<center>powerlevel10k는 oh-my-zsh에 사용할 수 있는 테마이다.</center>
+<center>나 빼고 다 알고 있는 것 같던데 하마터면 길가다 'powerlevel10k 아세요?' 하는 질문에 '아니요?' 하고 답해서 간첩신고 당할 뻔 했다.</center>
+
+<ul>
+  <li>아래로 조금 내리다보면 Installation이 있다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-29.png" />
+</p>
+<center>누가봐도 눌러야할 것 같은 Manual <b>밑의 Oh My Zsh를 눌러주자</b></center>
+
+<ul>
+  <li>그러면 Oh My Zsh에서 어떻게 설치해야하는지 알려준다. 첫번째 커맨드를 복사하자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-30.png" />
+</p>
+
+<ul>
+  <li>iTerm2에 붙여 넣고 엔터를 쳐주자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-31.png" />
+</p>
+<center>글을 쓰는 현재는 위와 같지만 달라질 수 있으니 홈페이지를 신뢰하자.</center>
+
+<ul>
+  <li>~/.zshrc에서 테마 설정을 바꾸어주어야 한다. 아래 커맨드를 iTerm2에 입력해서 엔터를 치면 ~/.zshrc가 vscode에서 열린다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code ~/.zshrc
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-32.png" />
+</p>
+<center>code가 vscode를 여는 커맨드이기때문에, vscode가 안깔려있다면 안 열릴 것이다. vscode를 깔거나, 다른 편집기로 열어주자.</center>
+
+<ul>
+  <li>ZSH_THEME를 바꾸어주자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ZSH_THEME="powerlevel10k/powerlevel10k"
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-33.png" />
+</p>
+<center>저장을 잊지말자!</center>
+
+<ul>
+  <li>~/.zshrc를 변경하면 터미널을 꼭 재시작해주어야한다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-34.png" />
+</p>
+<center>터미널을 재실행하면 갑자기 분위기 설문조사가 시작된다.</center>
+<center>첫번째 질문은 powerlevel10k에 아주 적합한 폰트를 설치할것이냐?</center>
+<center>알파벳 y(Y)를 눌러 설치를 하고 진행한다.</center>
+
+<ul>
+  <li>폰트를 열심히 설치해주고 있다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-35.png" />
+</p>
+
+<ul>
+  <li>설치가 완료되면, iTerm2를 껐다 켜달라고 친절하게 부탁한다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-36.png" />
+</p>
+<center>알려준대로 커맨드(⌘ Command) 키와 알파벳 q(Q)키를 눌러서 iTerm2를 완전 종료하고 다시 켜주자</center>
+
+<ul>
+  <li>iTerm2를 재실행하면 본격적으로 powerlevel10k 설정이 시작된다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-37.png" />
+</p>
+<center>또 다시 갑자기 분위기 설문조사가 시작된다.</center>
+<center>---&gt; 사이의 아이콘이 잘 보이는지 묻는다. &lt;----</center>
+<center>폰트가 잘 설치 됐는지 확인하는 단계이다. 잘 보인다면 빠르게 알파벳 y(Y)를 눌러서 넘어가자.</center>
+<center>만약 선택을 잘못했다면 알파벳 r(R)키를 누르면 처음부터 다시 시작할 수 있다.</center>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-38.png" />
+</p>
+<center>자물쇠</center>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-39.png" />
+</p>
+<center>소용돌이 같이 생긴 데비안 로고</center>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-40.png" />
+</p>
+<center>git,git마스코트,시계,다이아,집,폴더,폴더(outline),속도계?</center>
+<center>다양한 아이콘이 있다. 이 아이콘과 X가 서로 안겹치고 잘 나오냐고 묻는다.</center>
+
+<ul>
+  <li>이제 본격적으로 Prompt Style을 설정하는 단계이다. 본인이 원하는 스타일의 번호를 눌러 진행하자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-41.png" />
+</p>
+<center>나는 3번의 Rainbow로 설정할 것이다.</center>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-42.png" />
+</p>
+<center>Character Set 선택. 나는 유니코드로 선택.</center>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-43.png" />
+</p>
+<center>시간 표시 방식 선택</center>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-45.png" />
+</p>
+<center>헤드의 끝부분을 어떤 디자인으로 할 것인지 물어본다.</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-46.png" />
+</p>
+<center>끝 부분의 디자인을 어떻게 할 것인지 물어본다.</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-47.png" />
+</p>
+<center>한 줄 표시 vs 두 줄 표시</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-48.png" />
+</p>
+<center>헤드와 끝을 어떤 방식으로 이어서 표시할 것인지</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-49.png" />
+</p>
+<center>프레임 표시 형식</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-50.png" />
+</p>
+<center>나는 가운데 선을 긋는것을 선택했는데, 그 선의 색까지 물어보는 친절함을 보여준다.</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-51.png" />
+</p>
+<center>각 줄 사이를 어떤 넓이로 할 것인지</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-52.png" />
+</p>
+<center>아이콘 적게 vs 많이</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-53.png" />
+</p>
+<center>간결하게 vs TMI</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-54.png" />
+</p>
+<center>헤더와 꼬리를 입력된 커맨드에도 띄울건지 vs 안 띄울건지</center>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-55.png" />
+</p>
+<center>Instant Prompt 모드를 쓸 것인지 물어본다.</center>
+<center>이게 무엇인지 해서 읽어봤더니, zsh에서 플러그인이나 테마등을 로드하는데 시간이 오래 걸리는 경우가 있기때문에,</center>
+<center>로드를 다 하고 시작할 것인지, 일단 시작하고 로드할 것인지(Instant Prompt)를 물어 보는 것 같더라.</center>
+<center>1번을 권장한다고 해서 선택하고 넘어갔다.</center>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-56.png" />
+</p>
+<center>이미 powerlevel10k 설정이 있다고 뒤집어 쓸 것인지 물어보는 내용이다.</center>
+<center>아마 첫 설치라면 이게 안뜰텐데, 나의 경우는 블로그에 글을 쓰기 위해 처음부터 다시 깔았는데,</center>
+<center>환경설정 파일이 남아있어서 뜨는 것 같다. 그래서 뒤집어 쓰게 하고 넘어갔다.</center>
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-57.png" />
+</p>
+<center>변경할 내용을 ~/.zshrc에 적용할지 물어본다.</center>
+<center>그렇게 많은 설정을 하게 해놓고 당연한걸 물어본다.</center>
+<center>여기서 no를 하면 본인이 직접 ~/.zshrc에 설정한 내용을 써주고 저장 해줘야한다.</center>
+<center>본인이 고통을 즐기는 편이 아니라면 알파벳 y(Y)를 눌러주자.</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-59.png" />
+</p>
+<center>powerlevel10k 적용까지해서 iTerm2 설정이 모두 완료되었다.</center>
+<center>조금 귀찮았지만 아주 예쁜 터미널이 완성되었다!</center>
+<center>역대급으로 긴 내용이지만, 사실 설정 하나하나를 다 스크린샷으로 담았기 때문에 그런것이고,</center>
+<center>실제로는 얼마 걸리지 않는다. 차근차근 따라해보자!</center>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#iterm2" class="page__taxonomy-item-tag" rel="tag">iTerm2</a><span class="sep"> </span>
+    
+      
+      
+      <a href="/tags/#%ED%84%B0%EB%AF%B8%EB%84%90" class="page__taxonomy-item-tag" rel="tag">터미널</a><span class="sep"> </span>
+    
+      
+      
+      <a href="/tags/#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95" class="page__taxonomy-item-tag" rel="tag">환경설정</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#%EB%A7%A5-os" class="page__taxonomy-item p-category" rel="tag">맥 OS</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업로드:</strong> <time class="dt-published" datetime="2022-02-19T00:00:00+09:00">2022-02-19</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/%EB%A7%A5%20os/Mac-OS-settings-1/" class="pagination--pager" title="M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치
+">이전</a>
+    
+    
+      <a href="/%EB%A7%A5%20os/Mac-OS-settings-3/" class="pagination--pager" title="M1 맥 개발환경 설정 - (3) React Native 개발 환경 설정
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 DANU. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+extensions: ["tex2jax.js"],
+jax: ["input/TeX", "output/HTML-CSS"],
+TeX: {
+  equationNumbers: {
+    autoNumber: "AMS"
+  }
+},
+tex2jax: {
+inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+processEscapes: true
+},
+"HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+
+  </body>
+</html>

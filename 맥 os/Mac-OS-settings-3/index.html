@@ -1,0 +1,906 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>M1 맥 개발환경 설정 - (3) React Native 개발 환경 설정 - DANU Dev</title>
+<meta name="description" content="서론    M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.    React Native 개발 환경 설정    동아리에서 React Native로 앱을 개발한지 어언 1년이 지났다. 그 사이에 맥북을 3번이나 바꾸었는데, 언제나 가장 골치 아픈 부분은 React Native 환경 설정이었다. 누가 꼭 방해라도 하는 것 마냥 제대로 되지 않고, 심지어 M1으로 와서 그 난이도가 30배쯤 어려워졌다. 하지만 이제 수많은 실패 끝에 React Native 환경 설정로 학사 학위를 딸 수준 정도는 되었다고 생각하기 때문에 글로 정리해두려 한다.    이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다.    Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!         M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치     M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정">
+
+
+  <meta name="author" content="이단우">
+  
+  <meta property="article:author" content="이단우">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="DANU Dev">
+<meta property="og:title" content="M1 맥 개발환경 설정 - (3) React Native 개발 환경 설정">
+<meta property="og:url" content="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-3/">
+
+
+  <meta property="og:description" content="서론    M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.    React Native 개발 환경 설정    동아리에서 React Native로 앱을 개발한지 어언 1년이 지났다. 그 사이에 맥북을 3번이나 바꾸었는데, 언제나 가장 골치 아픈 부분은 React Native 환경 설정이었다. 누가 꼭 방해라도 하는 것 마냥 제대로 되지 않고, 심지어 M1으로 와서 그 난이도가 30배쯤 어려워졌다. 하지만 이제 수많은 실패 끝에 React Native 환경 설정로 학사 학위를 딸 수준 정도는 되었다고 생각하기 때문에 글로 정리해두려 한다.    이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다.    Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!         M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치     M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-02-19T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-3/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "DANU",
+      "url": "https://danu.dev/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="/assets/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          DANU Dev
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">카테고리</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://danu.dev/">
+        <img src="/assets/images/avatar.png" alt="이단우" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://danu.dev/" itemprop="url">이단우</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>DANU’s Devlog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Dong-A University</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:ldgs3324@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/lhojun" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+
+    
+  
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">카테고리</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <ul>
+      <li>
+            <a href="/categories/" class="">전체(4)</a>
+      </li>
+      </ul>
+      <li>
+        <span class="nav__sub-title">개발</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                        <li><a href="/categories/macos" class="">맥 OS (4)</a></li>
+                    
+                
+            </ul>
+      </li>
+      <li>
+        <span class="nav__sub-title">연구</span>
+            <ul>
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+            </ul>
+      </li>
+      <li>
+        <span class="nav__sub-title">일상</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                
+                    
+                
+            </ul>
+      </li>
+  </ul>
+</nav>
+
+  
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="M1 맥 개발환경 설정 - (3) React Native 개발 환경 설정">
+    <meta itemprop="description" content="  서론  M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.  React Native 개발 환경 설정  동아리에서 React Native로 앱을 개발한지 어언 1년이 지났다. 그 사이에 맥북을 3번이나 바꾸었는데, 언제나 가장 골치 아픈 부분은 React Native 환경 설정이었다. 누가 꼭 방해라도 하는 것 마냥 제대로 되지 않고, 심지어 M1으로 와서 그 난이도가 30배쯤 어려워졌다. 하지만 이제 수많은 실패 끝에 React Native 환경 설정로 학사 학위를 딸 수준 정도는 되었다고 생각하기 때문에 글로 정리해두려 한다.  이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다.  Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!      M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치    M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정  ">
+    <meta itemprop="datePublished" content="2022-02-19T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-3/" class="u-url" itemprop="url">M1 맥 개발환경 설정 - (3) React Native 개발 환경 설정
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <blockquote>
+  <h2 id="서론">서론</h2>
+
+  <p>M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.</p>
+
+  <h3 id="react-native-개발-환경-설정">React Native 개발 환경 설정</h3>
+
+  <p>동아리에서 React Native로 앱을 개발한지 어언 1년이 지났다. 그 사이에 맥북을 3번이나 바꾸었는데, 언제나 가장 골치 아픈 부분은 React Native 환경 설정이었다. 누가 꼭 방해라도 하는 것 마냥 제대로 되지 않고, 심지어 M1으로 와서 그 난이도가 30배쯤 어려워졌다. 하지만 이제 수많은 실패 끝에 React Native 환경 설정로 학사 학위를 딸 수준 정도는 되었다고 생각하기 때문에 글로 정리해두려 한다.</p>
+
+  <h3 id="이-글은-아래-두-가지-과정을-진행했다는-가정하에-진행된다">이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다.</h3>
+
+  <p>Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!</p>
+
+  <ul>
+    <li><a href="/맥 OS/Mac-OS-settings-1">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</a></li>
+    <li><a href="/맥 OS/Mac-OS-settings-2">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</a></li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>그 어느 것보다 먼저 해야 할 일이 있다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-1.png" />
+</p>
+<center>바로 Xcode 설치(앱스토어에서)와, 시뮬레이터(에뮬레이터) 다운로드이다.</center>
+<center>이 두가지가 이 모든 과정 진행시간의 90%이기 때문에 먼저 진행한다.</center>
+<center>Xcode를 다운로드 후 실행하면 나오는 이 화면에서 커맨드(⌘ Command) 키와 쉼표(,)키를 눌러서 설정으로 가주자.</center>
+
+<ul>
+  <li>에뮬레이터를 다운로드하자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-2.png" />
+</p>
+<center>열린 설정 창에서 Components탭으로 가면 에뮬레이터를 깔 수 있다.</center>
+<center>나 같은 경우는 이미 환경설정이 완료된 상태에서 다 지우고 다시 하는 것이기 때문에 이미 15.0 버전이 깔려있다.</center>
+<center>차마 시뮬레이터까지 다시 깔기는 너무 귀찮았다.</center>
+<center>아무튼 좌측의 다운로드 아이콘을 눌러 다운로드를 진행해두고 아래 과정을 진행하자!</center>
+
+<ul>
+  <li>nvm을 설치해주자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install nvm
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-3.png" />
+</p>
+<center>NVM; Node Version Manager</center>
+<center>노드의 버전을 유동적으로 사용할 수 있게 도와주는 아주 좋은 친구다.</center>
+<center>사실 일반적인 경우는 노드 버전을 굳이 바꿔가며 쓸 필요가 없겠지만</center>
+<center>나는 동아리의 개발 뿐만 아니라 가끔 Node.js로 프로젝트를 진행할 일이 있기 때문에 버전을 따로 관리하는게 편하더라.</center>
+
+<ul>
+  <li>설치가 다 되면 여기서 해야 할 일이 있다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-4.png" />
+</p>
+
+<ul>
+  <li>~/.zshrc 파일에 해당 내용을 추가해 주어야한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] &amp;&amp; \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] &amp;&amp; \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-5.png" />
+</p>
+<center>일단 복사를 해두자. 본인 터미널에 출력된 것을 신뢰하자.</center>
+
+<ul>
+  <li>~/.zshrc 파일에 추가하고 저장하자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-6.png" />
+</p>
+<center>들여쓰기를 고쳐서 넣어주자. 그냥 붙여넣으면 2,3번 라인이 한 수준 아래로 내려가더라.</center>
+<center>그리고 저렇게 주석으로 내가 무엇을 할 때 이 설정을 넣었는지 구분 해두면 미래에 편하다!</center>
+
+<ul>
+  <li>iTerm2(터미널)를 재시작하고, nvm을 입력해본다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-7.png" />
+</p>
+
+<ul>
+  <li>nvm 커맨드를 알려주는 글이 출력된다면 성공적으로 설치된 것이다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-8.png" />
+</p>
+
+<ul>
+  <li>그럼 설치 가능한 node의 버전을 보는 명령어를 입력해보자</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm ls-remote
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-9.png" />
+</p>
+
+<ul>
+  <li>설치 가능한 버전들이 와르르 쏟아질 것이다.</li>
+</ul>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-10.png" />
+</p>
+
+<ul>
+  <li>누가봐도 설치하고 싶은 가장 마지막 LTS버전을 설치하겠다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 16.14.0
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-11.png" />
+</p>
+
+<ul>
+  <li>설치가 완료되면, node 16.14.0이 기본으로 사용되도록 바뀐다.</li>
+</ul>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-12.png" />
+</p>
+
+<ul>
+  <li>아래 두 명령어를 통해 node와 npm의 버전이 잘 되어 있는지 확인하자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node -v
+npm -v
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-13.png" />
+</p>
+<center>노드 설치가 완료되었으면 거의 끝난 일이라고 볼 수 있다.</center>
+
+<ul>
+  <li>watchman을 설치하자</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install watchman
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-14.png" />
+</p>
+<center>watchman은 파일 변경을 실시간으로 감지해주는 친구인데,</center>
+<center>리액트 네이티브에선 변경된 소스를 자동 빌드하고 시뮬레이터로 업로드하기 위한 용도이다.</center>
+
+<ul>
+  <li>와르르 설치가 완료되고 나면, watchman 버전을 확인해서 설치가 잘 되었는지 보자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>watchman --version
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-15.png" />
+</p>
+
+<ul>
+  <li>버전이 날짜로 뜨는게 iTerm2인가 Homebrew인가의 버그였던가 그랬던 것 같은데 어쨋든 뜨기만 하면 된 것이다.</li>
+</ul>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-16.png" />
+</p>
+
+<ul>
+  <li>다음으론 cocoapods를 설치해준다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gem install cocoapods
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-17.png" />
+</p>
+<center>얘는 스위프트를 위한 의존성 관리 매니저이다.</center>
+<center>사실 이런거 몰라도 된다.</center>
+<center>비밀번호 입력을 해주자. (비밀번호 입력이 표시되지 않는 것에 당황하지 말자.)</center>
+
+<ul>
+  <li>설치가 잘 되었는지 버전을 확인해보자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod --version
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-18.png" />
+</p>
+
+<ul>
+  <li>그 다음으로 ffi를 설치해주자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gem install ffi
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-19.png" />
+</p>
+<center>얘는 아마 'Foreign Function Interface'의 약자일텐데</center>
+<center>리액트 네이티브의 어디에서 얘가 쓰이는지는 사실 잘 모른다.</center>
+
+<ul>
+  <li>설치가 완료되고나면 드디어 대망의 React Native CLI를 설치해주자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g react-native-cli
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-20.png" />
+</p>
+<center>사실상 이 글의 가장 핵심</center>
+
+<ul>
+  <li>설치가 완료되고나면 또 다시 버전 확인으로 설치가 잘 되었는지 확인하자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>react-native --version
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-21.png" />
+</p>
+<center>사진이 없긴 한데, 버전이 뜨면 어쨋든 잘 된 것이다.</center>
+<center>사실 여기까지만 하면 끝이다. 프로젝트를 생성하고, 개발을 진행하면 된다.</center>
+<h2 id="그런데">그런데</h2>
+<ul>
+  <li>사실 이 글을 쓴 이유는 여기에 있다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-22.png" />
+</p>
+<center>우리 프로젝트가 의존하고 있는 다양한 라이브러리들을 설치하려면 위 커맨드를 꼭 쳐주어야 한다.</center>
+
+<ul>
+  <li>무수한 에러가 뜬다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm ERR! code 1
+npm ERR! path /Users/danu/Desktop/프로젝트명/node_modules/sharp
+npm ERR! command failed
+npm ERR! command sh -c (node install/libvips &amp;&amp; node install/dll-copy &amp;&amp; prebuild-install) || (node-gyp rebuild &amp;&amp; node install/dll-copy)
+npm ERR! TOUCH Release/obj.target/libvips-cpp.stamp
+npm ERR!   CXX(target) Release/obj.target/sharp/src/common.o
+npm ERR! info sharp Detected globally-installed libvips v8.12.2
+npm ERR! info sharp Building from source via node-gyp
+npm ERR! gyp info it worked if it ends with ok
+npm ERR! gyp info using node-gyp@8.4.1
+npm ERR! gyp info using node@16.14.0 | darwin | arm64
+npm ERR! gyp info find Python using Python version 3.9.10 found at "/opt/homebrew/opt/python@3.9/bin/python3.9"
+npm ERR! gyp info spawn /opt/homebrew/opt/python@3.9/bin/python3.9
+npm ERR! gyp info spawn args [
+npm ERR! gyp info spawn args   '/Users/danu/.nvm/versions/node/v16.14.0/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py',
+npm ERR! gyp info spawn args   'binding.gyp',
+npm ERR! gyp info spawn args   '-f',
+npm ERR! gyp info spawn args   'make',
+npm ERR! gyp info spawn args   '-I',
+npm ERR! gyp info spawn args   '/Users/danu/Desktop/프로젝트명/node_modules/sharp/build/config.gypi',
+npm ERR! gyp info spawn args   '-I',
+npm ERR! gyp info spawn args   '/Users/danu/.nvm/versions/node/v16.14.0/lib/node_modules/npm/node_modules/node-gyp/addon.gypi',
+npm ERR! gyp info spawn args   '-I',
+npm ERR! gyp info spawn args   '/Users/danu/Library/Caches/node-gyp/16.14.0/include/node/common.gypi',
+npm ERR! gyp info spawn args   '-Dlibrary=shared_library',
+npm ERR! gyp info spawn args   '-Dvisibility=default',
+npm ERR! gyp info spawn args   '-Dnode_root_dir=/Users/danu/Library/Caches/node-gyp/16.14.0',
+npm ERR! gyp info spawn args   '-Dnode_gyp_dir=/Users/danu/.nvm/versions/node/v16.14.0/lib/node_modules/npm/node_modules/node-gyp',
+npm ERR! gyp info spawn args   '-Dnode_lib_file=/Users/danu/Library/Caches/node-gyp/16.14.0/&lt;(target_arch)/node.lib',
+npm ERR! gyp info spawn args   '-Dmodule_root_dir=/Users/danu/Desktop/프로젝트명/node_modules/sharp',
+npm ERR! gyp info spawn args   '-Dnode_engine=v8',
+npm ERR! gyp info spawn args   '--depth=.',
+npm ERR! gyp info spawn args   '--no-parallel',
+npm ERR! gyp info spawn args   '--generator-output',
+npm ERR! gyp info spawn args   'build',
+npm ERR! gyp info spawn args   '-Goutput_dir=.'
+npm ERR! gyp info spawn args ]
+npm ERR! gyp info spawn make
+npm ERR! gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+npm ERR! In file included from ../src/common.cc:22:
+npm ERR! In file included from /Users/danu/Library/Caches/node-gyp/16.14.0/include/node/node.h:63:
+npm ERR! In file included from /Users/danu/Library/Caches/node-gyp/16.14.0/include/node/v8.h:30:
+npm ERR! /Users/danu/Library/Caches/node-gyp/16.14.0/include/node/v8-internal.h:492:38: error: no template named 'remove_cv_t' in namespace 'std'; did you mean 'remove_cv'?
+npm ERR!             !std::is_same&lt;Data, std::remove_cv_t&lt;T&gt;&gt;::value&gt;::Perform(data);
+npm ERR!                                 ~~~~~^~~~~~~~~~~
+npm ERR!                                      remove_cv
+npm ERR! /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:710:50: note: 'remove_cv' declared here
+npm ERR! template &lt;class _Tp&gt; struct _LIBCPP_TEMPLATE_VIS remove_cv
+npm ERR!                                                  ^
+npm ERR! 1 error generated.
+npm ERR! make: *** [Release/obj.target/sharp/src/common.o] Error 1
+npm ERR! gyp ERR! build error
+npm ERR! gyp ERR! stack Error: `make` failed with exit code: 2
+npm ERR! gyp ERR! stack     at ChildProcess.onExit (/Users/danu/.nvm/versions/node/v16.14.0/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:194:23)
+npm ERR! gyp ERR! stack     at ChildProcess.emit (node:events:520:28)
+npm ERR! gyp ERR! stack     at Process.ChildProcess._handle.onexit (node:internal/child_process:291:12)
+npm ERR! gyp ERR! System Darwin 21.2.0
+npm ERR! gyp ERR! command "/Users/danu/.nvm/versions/node/v16.14.0/bin/node" "/Users/danu/.nvm/versions/node/v16.14.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+npm ERR! gyp ERR! cwd /Users/danu/Desktop/프로젝트명/node_modules/sharp
+npm ERR! gyp ERR! node -v v16.14.0
+npm ERR! gyp ERR! node-gyp -v v8.4.1
+npm ERR! gyp ERR! not ok
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/danu/.npm/_logs/2022-02-19T14_36_28_984Z-debug-0.log
+</code></pre></div></div>
+
+<center>누군가가 이 에러가 뜬다면 꼭 이 해결법을 시도해봤으면 해서 (안될수도 있지만) 에러코드를 일부러 다 붙여 넣는다.</center>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-23.png" />
+</p>
+
+<h2 id="아주-골치-아픈-일이다">아주 골치 아픈 일이다.</h2>
+
+<center>이거에 대해서 아주아주 많이 찾아보았는데.</center>
+<center>결론은 우리 동아리의 프로젝트에 포함된 패키지의 버전이 낮기 때문이다.</center>
+<center>찾아본 많은 글들에 의하면 우리 프로젝트의 react-native에 포함된</center>
+<center>node-sass의 버전이 노드 16버전을 지원하지 않고,</center>
+<center>내가 깐 노드의 버전이 16버전이라 발생하는 문제인데,</center>
+<p><br /></p>
+<center>문제는 M1, 즉 Apple Silicon을 노드는 16버전부터 공식적으로 지원했다는 것이다.</center>
+<center>이렇게 되면 해결법이 총 세가지로 나뉜다.</center>
+<p><br /></p>
+<center><b>첫 번째</b>는 로제타로 어찌저찌 잘 해보는 것인데, 나는 이 방법은 매우 선택하기 싫었다.</center>
+<center>골치 아파가며 로제타로 억지로 돌리긴 싫었기 때문인데,</center>
+<center>로제타 써서 한 것 중에 한번에 제대로 된 것이 없는 과거도 한 몫 했다.</center>
+<p><br /></p>
+<center><b>두 번째</b>로 할 수 있는 선택은 react-native의 버전을 올리는 것이었다.</center>
+<center>그래서 잠깐 우리 동아리의 프로젝트에 시도해봤더니 의존성때문에 라이브러리들이 와르르 에러를 내뱉더라.</center>
+<center>도저히 그 모습을 볼 수가 없어서 포기했다.</center>
+<center>사실 너무 귀찮았다!</center>
+
+<h2 id="겨우-찾아-낸-마지막-해결법">겨우 찾아 낸 마지막 해결법</h2>
+
+<ul>
+  <li>바로 ‘npm install’ 대신 이걸 쓰는 것이다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CXXFLAGS="--std=c++17" npm install
+</code></pre></div></div>
+
+<center>그러면 놀랍게도 잘 된다.</center>
+<center>구형 node-sass의 소스에 표준 C++ 버전이 11로 되어 있어서 발생하는 버그인데,</center>
+<center>컴파일이 어쩌고 저쩌고.. 는 잘 모르겠고 17버전으로 강제해서 실행해주면 문제가 해결된다.</center>
+
+<ul>
+  <li>실행까지 확인하기 위해 pod install을 하러가자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ios
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-24.png" />
+</p>
+
+<ul>
+  <li>pod install을 해주고</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod install
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-25.png" />
+</p>
+<ul>
+  <li>다시 프로젝트 폴더로 돌아와주자.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
+</code></pre></div>    </div>
+  </li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-26.png" />
+</p>
+
+<ul>
+  <li>실행을 통해 잘 되는지 확인하자!</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>react-native run-ios
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-27.png" />
+</p>
+
+<center>실행이 잘 되었다면 정말 환경설정 끝!</center>
+
+<center>저 remove_cv 에러 때문에 몇 주를 고생을 했는데, github issues을 꼼꼼히 읽어보니 그 답이 있었다.</center>
+<center>앞으로도 영어라고 무작정 회피하지 말고 읽는 습관을 들여야겠다.</center>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C" class="page__taxonomy-item-tag" rel="tag">리액트 네이티브</a><span class="sep"> </span>
+    
+      
+      
+      <a href="/tags/#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95" class="page__taxonomy-item-tag" rel="tag">환경설정</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#%EB%A7%A5-os" class="page__taxonomy-item p-category" rel="tag">맥 OS</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업로드:</strong> <time class="dt-published" datetime="2022-02-19T00:00:00+09:00">2022-02-19</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/%EB%A7%A5%20os/Mac-OS-settings-2/" class="pagination--pager" title="M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정
+">이전</a>
+    
+    
+      <a href="/%EB%A7%A5%20os/Mac-OS-settings-4/" class="pagination--pager" title="M1 맥 개발환경 설정 - (4) 안드로이드 스튜디오 설치
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 DANU. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+extensions: ["tex2jax.js"],
+jax: ["input/TeX", "output/HTML-CSS"],
+TeX: {
+  equationNumbers: {
+    autoNumber: "AMS"
+  }
+},
+tex2jax: {
+inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+processEscapes: true
+},
+"HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+
+  </body>
+</html>
