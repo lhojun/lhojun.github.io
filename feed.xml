@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://danu.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danu.dev/" rel="alternate" type="text/html" /><updated>2022-02-20T00:52:49+09:00</updated><id>https://danu.dev/feed.xml</id><title type="html">DANU Dev</title><subtitle>DANU's Devlog</subtitle><author><name>이단우</name></author><entry><title type="html">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</title><link href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1</id><content type="html" xml:base="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://danu.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danu.dev/" rel="alternate" type="text/html" /><updated>2022-02-20T16:43:37+09:00</updated><id>https://danu.dev/feed.xml</id><title type="html">DANU Dev</title><subtitle>DANU's Devlog</subtitle><author><name>이단우</name></author><entry><title type="html">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</title><link href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1</id><content type="html" xml:base="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/">&lt;blockquote&gt;
   &lt;h2 id=&quot;서론&quot;&gt;서론&lt;/h2&gt;
 
   &lt;p&gt;M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.&lt;/p&gt;
@@ -16,7 +16,7 @@
   &lt;li&gt;&lt;a href=&quot;https://brew.sh&quot;&gt;brew.sh&lt;/a&gt;로 이동한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-1.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-1.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -26,23 +26,23 @@
 &lt;/ul&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-2.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-2.png&quot; /&gt;
 &lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-3.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-3.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;그러면 비밀번호를 입력하라고 뜬다. 맥의 비밀번호를 입력해주자.&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-4.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-4.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;진행을 계속 하고싶으면 RETURN(엔터) 키를 누르라고 한다. 눌러주자.&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-5.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-5.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;빠르게 설치가 진행되고나면, 가장 아래의 Next steps에서 해야 할 일을 알려준다.&lt;/center&gt;
 
@@ -52,14 +52,14 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 커맨드 역시 다를 수 있으니, 본인 터미널에 뜬 커맨드를 복사해서 붙여넣자!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-6.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-6.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;' &amp;gt;&amp;gt; /Users/사용자이름/.zprofile
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-7.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-7.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
@@ -70,14 +70,14 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 시키는대로만 잘 따라했으면 특별히 안 될 이유는 없을 것이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-8.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-8.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-9.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-9.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;이렇게 뜬다면 잘 된것이다.&lt;/center&gt;
 
@@ -85,14 +85,14 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;Homebrew를 통해 visual studio code (vscode라고 흔히 부르는)와 iterm2를 설치해보겠다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-10.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-10.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install --cask visual-studio-cde iterm2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-homebrew/homebrew-2022-02-05-11.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-homebrew/homebrew-2022-02-19-11.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;설치도 잘 되었다!&lt;/center&gt;</content><author><name>이단우</name></author><category term="맥 OS" /><category term="홈브루" /><category term="환경설정" /><summary type="html">서론 M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.</summary></entry><entry><title type="html">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</title><link href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-2/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-2</id><content type="html" xml:base="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-2/">&lt;blockquote&gt;
   &lt;h2 id=&quot;서론&quot;&gt;서론&lt;/h2&gt;
@@ -120,7 +120,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-1.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-1.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -128,7 +128,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/ul&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-2.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-2.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;아주 밋밋하다.&lt;/center&gt;
 
@@ -136,56 +136,56 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;커맨드(⌘ Command) 키와 쉼표(,)키를 눌러서 환경설정을 열어보자!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-3.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-3.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Appearance 탭으로 이동하자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-4.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-4.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Theme를 Minimal로 바꿔준다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-5.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-5.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Profiles탭으로 이동하자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-6.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-6.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Profiles내의 탭들중에서 Session으로 이동하자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-7.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-7.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;가장 하단의 Status bar enabled를 체크해준다. (iTerm2에서 상태바를 볼 수 있다.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-8.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-8.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;체크 후 바로 옆의 Configure Status Bar로 들어가면 보이는 화면이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-9.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-9.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;본인이 보고싶은 상태들을 드래그해서 옮기고, 하단의 Auto-Rainbow에서 Color Theme를 설정할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-10.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-10.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;나같은 경우는 현재 디렉토리 정보, git 상태, CPU 사용량을 담았다. 본인의 취향에 따라 담으면 된다.&lt;/center&gt;
 &lt;center&gt;Auto-Rainbow는 Automatic으로 설정해주었다.&lt;/center&gt;
@@ -194,7 +194,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;이제 iTerm2의 컬러테마를 설정해주자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-11.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-11.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;&lt;a href=&quot;https://iterm2colorschemes.com&quot; target=&quot;_blank&quot;&gt;iterm2colorschemes.com&lt;/a&gt;으로 이동해준다. iTerm2의 컬러테마를 무수히 공유해주고 있는 사이트이다.&lt;/center&gt;
 
@@ -202,42 +202,42 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;본인이 마음에 드는 컬러테마를 선택하자. 난 Github Dark를 선택했다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-12.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-12.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;마음에 드는 컬러테마 이름의 링크를 누르고 들어가면 이런 XML들이 뜬다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-13.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-13.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;해당 파일을 찾기 쉬운 곳에 저장하자. 사파리 기준으로 커맨드(⌘ Command) 키와 알파벳 s(S)키를 누르면 쉽다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-14.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-14.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;이렇게 txt 파일로 저장이 된다. (굳이 txt파일로 안되었더라도, 아까 사이트에서 본 내용만 깔끔하게 담겨있다면 문제 없다.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-15.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-15.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;확장자를 txt에서 itermcolors로 바꾸어주자. iTerm2의 컬러테마 파일 확장자이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-16.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-16.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;.itermcolors 사용을 눌러주자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-17.png&quot; width=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-17.png&quot; width=&quot;500px&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;참고로 이 알림이 안뜬다면 (아주 높은 확률로) 확장자를 바꾼게 아니라 파일 이름만 바꾸었을 가능성이 크다.&lt;/center&gt;
 &lt;center&gt;그럴 땐 파일을 '우클릭 &amp;gt; 정보 가져오기 &amp;gt; 이름 및 확장자'에서 바로 바꾸어주거나, 확장자 가리기를 체크 해제하고 다시 바꾸면 된다.&lt;/center&gt;
@@ -246,42 +246,42 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;잘 바뀌었다!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-18.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-18.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;다시 iTerm2로 돌아와서 Profiles 내의 Colors탭을 선택하고, 방금 받은 컬러테마 파일을 여기로 드래그해주자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-19.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-19.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;그러면 Colors Scheme이 import되었다고 알려준다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-20.png&quot; width=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-20.png&quot; width=&quot;500px&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;우측 하단의 Color Presets…를 눌러보면 방금 넣은 ‘GitHub Dark’(혹은 본인이 받은 컬러테마 이름)이 추가되어있다. 클릭해주자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-21.png&quot; width=&quot;500px&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-21.png&quot; width=&quot;500px&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;그럼 색들이 바뀌어서 적용이 된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-22.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-22.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;이제 환경설정은 끄고, iTerm2로 돌아가보자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-23.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-23.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;아까보다 뭐가 많이 깔끔해졌다. 하지만 끝이 아니다.&lt;/center&gt;
 
@@ -289,7 +289,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;oh-my-zsh를 깔아주자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-24.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-24.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;&lt;a href=&quot;https://ohmyz.sh&quot; target=&quot;_blank&quot;&gt;oh-my-zsh 공식 홈페이지&lt;/a&gt;로 이동해준다.&lt;/center&gt;
 &lt;center&gt;oh-my-zsh는 zsh의 설정을 조금 더 쉽게 관리하기 위한 프레임워크이다.&lt;/center&gt;
@@ -302,7 +302,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;설치를 할 수 있는 커맨드가 보인다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-25.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-25.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -313,7 +313,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-26.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-26.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;글을 쓰는 현재는 위와 같지만 달라질 수 있으니 홈페이지를 신뢰하자.&lt;/center&gt;
 
@@ -321,7 +321,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;억겁의 시간이 흐르고 나면 누가봐도 oh-my-zsh가 설치된 것 같은 화면이 보인다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-27.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-27.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;KTX 타고 가면서 봐도 설치된 걸 알 수 있을 수준&lt;/center&gt;
 
@@ -329,7 +329,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;그 다음으로 powerlevel10k를 설치해보자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-28.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-28.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;&lt;a href=&quot;https://github.com/romkatv/powerlevel10k&quot; target=&quot;_blank&quot;&gt;powerlevel10k&lt;/a&gt; 깃허브로 이동해준다.&lt;/center&gt;
 &lt;center&gt;powerlevel10k는 oh-my-zsh에 사용할 수 있는 테마이다.&lt;/center&gt;
@@ -339,7 +339,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;아래로 조금 내리다보면 Installation이 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-29.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-29.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;누가봐도 눌러야할 것 같은 Manual &lt;b&gt;밑의 Oh My Zsh를 눌러주자&lt;/b&gt;&lt;/center&gt;
 
@@ -347,7 +347,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;그러면 Oh My Zsh에서 어떻게 설치해야하는지 알려준다. 첫번째 커맨드를 복사하자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-30.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-30.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -358,7 +358,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-31.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-31.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;글을 쓰는 현재는 위와 같지만 달라질 수 있으니 홈페이지를 신뢰하자.&lt;/center&gt;
 
@@ -370,7 +370,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-32.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-32.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;code가 vscode를 여는 커맨드이기때문에, vscode가 안깔려있다면 안 열릴 것이다. vscode를 깔거나, 다른 편집기로 열어주자.&lt;/center&gt;
 
@@ -382,7 +382,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-33.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-33.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;저장을 잊지말자!&lt;/center&gt;
 
@@ -390,7 +390,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;~/.zshrc를 변경하면 터미널을 꼭 재시작해주어야한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-34.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-34.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;터미널을 재실행하면 갑자기 분위기 설문조사가 시작된다.&lt;/center&gt;
 &lt;center&gt;첫번째 질문은 powerlevel10k에 아주 적합한 폰트를 설치할것이냐?&lt;/center&gt;
@@ -400,14 +400,14 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;폰트를 열심히 설치해주고 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-35.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-35.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;설치가 완료되면, iTerm2를 껐다 켜달라고 친절하게 부탁한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-36.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-36.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;알려준대로 커맨드(⌘ Command) 키와 알파벳 q(Q)키를 눌러서 iTerm2를 완전 종료하고 다시 켜주자&lt;/center&gt;
 
@@ -415,22 +415,22 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;iTerm2를 재실행하면 본격적으로 powerlevel10k 설정이 시작된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-37.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-37.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;또 다시 갑자기 분위기 설문조사가 시작된다.&lt;/center&gt;
 &lt;center&gt;---&amp;gt; 사이의 아이콘이 잘 보이는지 묻는다. &amp;lt;----&lt;/center&gt;
 &lt;center&gt;폰트가 잘 설치 됐는지 확인하는 단계이다. 잘 보인다면 빠르게 알파벳 y(Y)를 눌러서 넘어가자.&lt;/center&gt;
 &lt;center&gt;만약 선택을 잘못했다면 알파벳 r(R)키를 누르면 처음부터 다시 시작할 수 있다.&lt;/center&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-38.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-38.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;자물쇠&lt;/center&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-39.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-39.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;소용돌이 같이 생긴 데비안 로고&lt;/center&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-40.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-40.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;git,git마스코트,시계,다이아,집,폴더,폴더(outline),속도계?&lt;/center&gt;
 &lt;center&gt;다양한 아이콘이 있다. 이 아이콘과 X가 서로 안겹치고 잘 나오냐고 묻는다.&lt;/center&gt;
@@ -439,81 +439,81 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;이제 본격적으로 Prompt Style을 설정하는 단계이다. 본인이 원하는 스타일의 번호를 눌러 진행하자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-41.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-41.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;나는 3번의 Rainbow로 설정할 것이다.&lt;/center&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-42.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-42.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;Character Set 선택. 나는 유니코드로 선택.&lt;/center&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-43.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-43.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;시간 표시 방식 선택&lt;/center&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-45.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-45.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;헤드의 끝부분을 어떤 디자인으로 할 것인지 물어본다.&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-46.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-46.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;끝 부분의 디자인을 어떻게 할 것인지 물어본다.&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-47.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-47.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;한 줄 표시 vs 두 줄 표시&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-48.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-48.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;헤드와 끝을 어떤 방식으로 이어서 표시할 것인지&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-49.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-49.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;프레임 표시 형식&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-50.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-50.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;나는 가운데 선을 긋는것을 선택했는데, 그 선의 색까지 물어보는 친절함을 보여준다.&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-51.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-51.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;각 줄 사이를 어떤 넓이로 할 것인지&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-52.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-52.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;아이콘 적게 vs 많이&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-53.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-53.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;간결하게 vs TMI&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-54.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-54.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;헤더와 꼬리를 입력된 커맨드에도 띄울건지 vs 안 띄울건지&lt;/center&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-55.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-55.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;Instant Prompt 모드를 쓸 것인지 물어본다.&lt;/center&gt;
 &lt;center&gt;이게 무엇인지 해서 읽어봤더니, zsh에서 플러그인이나 테마등을 로드하는데 시간이 오래 걸리는 경우가 있기때문에,&lt;/center&gt;
 &lt;center&gt;로드를 다 하고 시작할 것인지, 일단 시작하고 로드할 것인지(Instant Prompt)를 물어 보는 것 같더라.&lt;/center&gt;
 &lt;center&gt;1번을 권장한다고 해서 선택하고 넘어갔다.&lt;/center&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-56.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-56.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;이미 powerlevel10k 설정이 있다고 뒤집어 쓸 것인지 물어보는 내용이다.&lt;/center&gt;
 &lt;center&gt;아마 첫 설치라면 이게 안뜰텐데, 나의 경우는 블로그에 글을 쓰기 위해 처음부터 다시 깔았는데,&lt;/center&gt;
 &lt;center&gt;환경설정 파일이 남아있어서 뜨는 것 같다. 그래서 뒤집어 쓰게 하고 넘어갔다.&lt;/center&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-57.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-57.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;변경할 내용을 ~/.zshrc에 적용할지 물어본다.&lt;/center&gt;
 &lt;center&gt;그렇게 많은 설정을 하게 해놓고 당연한걸 물어본다.&lt;/center&gt;
@@ -521,7 +521,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;center&gt;본인이 고통을 즐기는 편이 아니라면 알파벳 y(Y)를 눌러주자.&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-05-iterm2/iterm2-2022-02-05-59.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-iterm2/iterm2-2022-02-19-59.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;powerlevel10k 적용까지해서 iTerm2 설정이 모두 완료되었다.&lt;/center&gt;
 &lt;center&gt;조금 귀찮았지만 아주 예쁜 터미널이 완성되었다!&lt;/center&gt;
@@ -549,7 +549,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;그 어느 것보다 먼저 해야 할 일이 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-1.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-1.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;바로 Xcode 설치(앱스토어에서)와, 시뮬레이터(에뮬레이터) 다운로드이다.&lt;/center&gt;
 &lt;center&gt;이 두가지가 이 모든 과정 진행시간의 90%이기 때문에 먼저 진행한다.&lt;/center&gt;
@@ -559,7 +559,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;에뮬레이터를 다운로드하자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-2.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-2.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;열린 설정 창에서 Components탭으로 가면 에뮬레이터를 깔 수 있다.&lt;/center&gt;
 &lt;center&gt;나 같은 경우는 이미 환경설정이 완료된 상태에서 다 지우고 다시 하는 것이기 때문에 이미 15.0 버전이 깔려있다.&lt;/center&gt;
@@ -574,7 +574,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-3.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-3.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;NVM; Node Version Manager&lt;/center&gt;
 &lt;center&gt;노드의 버전을 유동적으로 사용할 수 있게 도와주는 아주 좋은 친구다.&lt;/center&gt;
@@ -585,7 +585,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;설치가 다 되면 여기서 해야 할 일이 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-4.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-4.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -598,7 +598,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-5.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-5.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;일단 복사를 해두자. 본인 터미널에 출력된 것을 신뢰하자.&lt;/center&gt;
 
@@ -606,7 +606,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;li&gt;~/.zshrc 파일에 추가하고 저장하자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-6.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-6.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;들여쓰기를 고쳐서 넣어주자. 그냥 붙여넣으면 2,3번 라인이 한 수준 아래로 내려가더라.&lt;/center&gt;
 &lt;center&gt;그리고 저렇게 주석으로 내가 무엇을 할 때 이 설정을 넣었는지 구분 해두면 미래에 편하다!&lt;/center&gt;
@@ -619,14 +619,14 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-7.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-7.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;nvm 커맨드를 알려주는 글이 출력된다면 성공적으로 설치된 것이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-8.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-8.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -637,7 +637,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-9.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-9.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -645,7 +645,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/ul&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-10.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-10.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -656,7 +656,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-11.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-11.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -664,7 +664,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;/ul&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-12.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-12.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -676,7 +676,7 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-13.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-13.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;노드 설치가 완료되었으면 거의 끝난 일이라고 볼 수 있다.&lt;/center&gt;
 
@@ -688,7 +688,7 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-14.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-14.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;watchman은 파일 변경을 실시간으로 감지해주는 친구인데,&lt;/center&gt;
 &lt;center&gt;리액트 네이티브에선 변경된 소스를 자동 빌드하고 시뮬레이터로 업로드하기 위한 용도이다.&lt;/center&gt;
@@ -701,7 +701,7 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-15.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-15.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -709,7 +709,7 @@ npm -v
 &lt;/ul&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-16.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-16.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -720,7 +720,7 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-17.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-17.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;얘는 스위프트를 위한 의존성 관리 매니저이다.&lt;/center&gt;
 &lt;center&gt;사실 이런거 몰라도 된다.&lt;/center&gt;
@@ -734,7 +734,7 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-18.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-18.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -745,7 +745,7 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-19.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-19.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;얘는 아마 'Foreign Function Interface'의 약자일텐데&lt;/center&gt;
 &lt;center&gt;리액트 네이티브의 어디에서 얘가 쓰이는지는 사실 잘 모른다.&lt;/center&gt;
@@ -758,7 +758,7 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-20.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-20.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;사실상 이 글의 가장 핵심&lt;/center&gt;
 
@@ -770,7 +770,7 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-21.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-21.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;사진이 없긴 한데, 버전이 뜨면 어쨋든 잘 된 것이다.&lt;/center&gt;
 &lt;center&gt;사실 여기까지만 하면 끝이다. 프로젝트를 생성하고, 개발을 진행하면 된다.&lt;/center&gt;
@@ -783,7 +783,7 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-22.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-22.png&quot; /&gt;
 &lt;/p&gt;
 &lt;center&gt;우리 프로젝트가 의존하고 있는 다양한 라이브러리들을 설치하려면 위 커맨드를 꼭 쳐주어야 한다.&lt;/center&gt;
 
@@ -861,7 +861,7 @@ npm ERR!     /Users/danu/.npm/_logs/2022-02-19T14_36_28_984Z-debug-0.log
 &lt;center&gt;누군가가 이 에러가 뜬다면 꼭 이 해결법을 시도해봤으면 해서 (안될수도 있지만) 에러코드를 일부러 다 붙여 넣는다.&lt;/center&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-23.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-23.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;h2 id=&quot;아주-골치-아픈-일이다&quot;&gt;아주 골치 아픈 일이다.&lt;/h2&gt;
@@ -905,7 +905,7 @@ npm ERR!     /Users/danu/.npm/_logs/2022-02-19T14_36_28_984Z-debug-0.log
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-24.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-24.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -916,7 +916,7 @@ npm ERR!     /Users/danu/.npm/_logs/2022-02-19T14_36_28_984Z-debug-0.log
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-25.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-25.png&quot; /&gt;
 &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;다시 프로젝트 폴더로 돌아와주자.
@@ -925,7 +925,7 @@ npm ERR!     /Users/danu/.npm/_logs/2022-02-19T14_36_28_984Z-debug-0.log
   &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-26.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-26.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -936,7 +936,7 @@ npm ERR!     /Users/danu/.npm/_logs/2022-02-19T14_36_28_984Z-debug-0.log
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/assets/images/2022-02-06-react-native-install/react-native-install-2022-02-05-27.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-27.png&quot; /&gt;
 &lt;/p&gt;
 
 &lt;center&gt;실행이 잘 되었다면 정말 환경설정 끝!&lt;/center&gt;
@@ -958,68 +958,70 @@ npm ERR!     /Users/danu/.npm/_logs/2022-02-19T14_36_28_984Z-debug-0.log
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://developer.android.com/studio&quot;&gt;https://developer.android.com/studio&lt;/a&gt;로 이동한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-01.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-1.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;누가봐도 눌러야 할 것 같은 버튼인 초록색의 Download Android Studio를 클릭하자.&lt;/center&gt;
 
 &lt;ul&gt;
   &lt;li&gt;약관을 읽어주자.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-02.png&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-03.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-2.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-3.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;약관에 동의를 하고, &lt;b&gt;우리는 M1 맥이기 때문에 이번엔 누르면 안될 것 같이 생긴 흰색의 Mac with Apple chip 버튼을 클릭하자.&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;(아직까지 일반적인 경우엔 인텔 맥북을 더 많이 써서 저렇게 해놓은듯 하다.)&lt;/center&gt;
 
 &lt;ul&gt;
   &lt;li&gt;dmg 파일이 다운되고나면 실행하자.(실행이라고 보는게 맞나?)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-04.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-4.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;안드로이드 스튜디오 아이콘을 응용 프로그램 폴더로 옮겨주자&lt;/center&gt;
 
 &lt;ul&gt;
   &lt;li&gt;그리고 런치패드에 있는 안드로이드 스튜디오를 실행하면 안드로이드 스튜디오 셋팅을 가져올 것이냐고 물어본다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-05.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-5.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;나 같은 경우엔 컴퓨터를 바꾸거나하는 경우에 기존 설정을 그대로 땡겨오는 것을 혐오 수준으로 싫어하기 때문에 기존에 체크된 &lt;b&gt;Do not import settings&lt;/b&gt;로 두고 넘어간다.&lt;/center&gt;
 
 &lt;ul&gt;
   &lt;li&gt;안드로이드 스튜디오 설치가 시작된다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-06.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-6.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;버전 이름이 Bumblebee라 호박벌이 그려져있나보다.&lt;/center&gt;
 
 &lt;ul&gt;
   &lt;li&gt;안드로이드 스튜디오 사용 데이터 공유에 동의할건지 물어본다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-07.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-7.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;개발자로서 이런 정보가 개발에 참 도움이 되는 건 알지만 그래도 내 정보만은 안된다는 마음으로 Don't send를 누르고 넘어가준다.&lt;/center&gt;
 
 &lt;ul&gt;
   &lt;li&gt;본격적인 설치과정이 시작된다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-08.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-8.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;빠른 Next로 진행&lt;/center&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-09.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-9.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;난 아주 평범한 사람이기 때문에 Standard로 진행. 세부적인 설정을 하고싶은 사람은 Custom으로 가자.&lt;/center&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-10.png&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;다크모드 vs 라이트모드 참고로 본인은 어두워 죽어도 다크모드파이기 때문에 Darcula를 선택.&lt;/center&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-10.png&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;다크모드 vs 라이트모드&lt;/center&gt;
+&lt;center&gt;참고로 본인은 어두워 죽어도 다크모드파이기 때문에 Darcula를 선택.&lt;/center&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-11.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-11.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;빠른 Next로 진행&lt;/center&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-12.png&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;각각의 License Agreement에 동의해주어야한다. 좌측의 Licenses 목록의 대주제 총 세가지에 대해서 클릭해서 Accept해주자.&lt;/center&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-12.png&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;각각의 License Agreement에 동의해주어야한다.&lt;/center&gt;
+&lt;center&gt;좌측의 Licenses 목록의 대주제 총 세가지에 대해서 클릭해서 Accept해주자.&lt;/center&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-13.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-13.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;이런 느낌으로 세개 모두 Accept해주고 넘어가주자. (현 시점엔 세개지만, 나중엔 더 많을수도 더 적을수도 있다.)&lt;/center&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-14.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-14.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;그럼 여차저차 안드로이드 스튜디오가 설치를 시작한다.&lt;/center&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-15.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-15.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;다운로드가 완료되면 로그를 보여준다. Finish를 눌러주자.&lt;/center&gt;
 
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-06-android-studio/android-studio-2022-02-07-16.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/2022-02-19-android-studio/android-studio-2022-02-19-16.png&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;여기까지해서 안드로이드 스튜디오 설치가 끝났다.&lt;/center&gt;
 &lt;center&gt;M1이 공식적으로 지원되지 않을때와 비교하면 이걸 굳이 글로 남길 필요가 있나 싶을 정도로 간단해졌다. 어쨋든 기록은 좋은거니까 남겨두도록 하자!&lt;/center&gt;</content><author><name>이단우</name></author><category term="맥 OS" /><category term="환경설정" /><category term="안드로이드" /><summary type="html">서론 M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다. 안드로이드 스튜디오 설치 최근 뜬금없이 안드로이드 앱 외주를 맡게 되었기 때문에 안드로이드 스튜디오를 깔 일이 생겼다. 리액트 네이티브 앱을 한창 개발 할 당시에는 인텔 맥을 쓰고 있어서 안드로이드 스튜디오를 까는 것이 신경쓰이는 일이 전혀 아니었는데, M1 맥 출시 초기에는 안드로이드 스튜디오가 지원이 안되는 치명적인 문제가 있었다. 그리고 그 뒤엔 어떤 개발자분께서 만든 M1 맥에서 돌아가는 버전을 썼는데 지금은 많은 개발자님들의 노고덕분에 아주 간단하게 설치할 수 있게 되었으니 빠르게 설치해보도록 하자!</summary></entry></feed>
