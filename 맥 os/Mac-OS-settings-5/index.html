@@ -1,0 +1,709 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>M1 맥 개발환경 설정 - (5) Jekyll 환경설정 - DANU Dev</title>
+<meta name="description" content="서론    M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.    Jekyll 환경설정    이 블로그는 Jekyll의 아주 유명한 테마인 Minimal Mistakes로 만들어졌다. 그리고 공부하는 식빵맘님의 글을 참고해서 카테고리와 태그를 만들었다. 카테고리와 태그는 저 분의 글에서 너무 잘 정리되어있고, 나는 Jekyll 로컬 개발 환경을 구축하는 글을 정리해두려고 한다.    이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다.    Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!         M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치     M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정 * iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!">
+
+
+  <meta name="author" content="이단우">
+  
+  <meta property="article:author" content="이단우">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="DANU Dev">
+<meta property="og:title" content="M1 맥 개발환경 설정 - (5) Jekyll 환경설정">
+<meta property="og:url" content="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/">
+
+
+  <meta property="og:description" content="서론    M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.    Jekyll 환경설정    이 블로그는 Jekyll의 아주 유명한 테마인 Minimal Mistakes로 만들어졌다. 그리고 공부하는 식빵맘님의 글을 참고해서 카테고리와 태그를 만들었다. 카테고리와 태그는 저 분의 글에서 너무 잘 정리되어있고, 나는 Jekyll 로컬 개발 환경을 구축하는 글을 정리해두려고 한다.    이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다.    Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!         M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치     M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정 * iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-02-20T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "DANU",
+      "url": "https://danu.dev/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="/assets/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          DANU Dev
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">카테고리</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://danu.dev/">
+        <img src="/assets/images/avatar.png" alt="이단우" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://danu.dev/" itemprop="url">이단우</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>DANU’s Devlog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Dong-A University</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:ldgs3324@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/lhojun" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+
+    
+  
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">카테고리</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <ul>
+      <li>
+            <a href="/categories/" class="">전체(5)</a>
+      </li>
+      </ul>
+      <li>
+        <span class="nav__sub-title">개발</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                        <li><a href="/categories/macos" class="">맥 OS (5)</a></li>
+                    
+                
+            </ul>
+      </li>
+      <li>
+        <span class="nav__sub-title">연구</span>
+            <ul>
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+            </ul>
+      </li>
+      <li>
+        <span class="nav__sub-title">일상</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                
+                    
+                
+            </ul>
+      </li>
+  </ul>
+</nav>
+
+  
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="M1 맥 개발환경 설정 - (5) Jekyll 환경설정">
+    <meta itemprop="description" content="  서론  M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.  Jekyll 환경설정  이 블로그는 Jekyll의 아주 유명한 테마인 Minimal Mistakes로 만들어졌다. 그리고 공부하는 식빵맘님의 글을 참고해서 카테고리와 태그를 만들었다. 카테고리와 태그는 저 분의 글에서 너무 잘 정리되어있고, 나는 Jekyll 로컬 개발 환경을 구축하는 글을 정리해두려고 한다.  이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다.  Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!      M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치    M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정* iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!  ">
+    <meta itemprop="datePublished" content="2022-02-20T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/" class="u-url" itemprop="url">M1 맥 개발환경 설정 - (5) Jekyll 환경설정
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <blockquote>
+  <h2 id="서론">서론</h2>
+
+  <p>M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.</p>
+
+  <h3 id="jekyll-환경설정">Jekyll 환경설정</h3>
+
+  <p>이 블로그는 Jekyll의 아주 유명한 테마인 Minimal Mistakes로 만들어졌다. 그리고 <a href="https://ansohxxn.github.io">공부하는 식빵맘</a>님의 글을 참고해서 카테고리와 태그를 만들었다. 카테고리와 태그는 저 분의 글에서 너무 잘 정리되어있고, 나는 Jekyll 로컬 개발 환경을 구축하는 글을 정리해두려고 한다.</p>
+
+  <h3 id="이-글은-아래-두-가지-과정을-진행했다는-가정하에-진행된다">이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다.</h3>
+
+  <p>Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!</p>
+
+  <ul>
+    <li><a href="/맥 OS/Mac-OS-settings-1">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</a></li>
+    <li><a href="/맥 OS/Mac-OS-settings-2">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</a><br />
+* iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>brew를 통해서 rbenv와 ruby-build를 설치하자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-1.png" />
+</p>
+<center>rbenv는 ruby의 버전을 독립적으로 관리할 수 있게 도와주는 패키지이고,</center>
+<center>ruby-build는 rbenv의 플러그인으로, 서로 다른 버전의 ruby를 설치할 수 있게 도와주는 친구다.</center>
+
+<ul>
+  <li>설치가 잘 되었는지 확인해보자</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv versions
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-2.png" />
+</p>
+
+<ul>
+  <li>현재 rbenv에서 사용할 수 있는 ruby버전들을 볼 수 있다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-3.png" />
+</p>
+
+<ul>
+  <li>그 다음으로 현재 설치할 수 있는 ruby의 버전을 보자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv install -l
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-4.png" />
+</p>
+
+<ul>
+  <li>현재 설치 가능한 ruby버전들을 볼 수 있다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-5.png" />
+</p>
+
+<ul>
+  <li>본인이 원하는 버전을 선택해서 설치하자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv install 2.6.9
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-6.png" />
+</p>
+<center>너무 최신버전을 쓰면 안좋다는 나만의 편견에 따라 깔 수 있는 버전 중 가장 낮은 버전인</center>
+<center>2.6.9 버전으로 설치하도록 하겠다.</center>
+
+<ul>
+  <li>설치가 완료되고 나면 다시 한번 사용할 수 있는 버전을 보자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv versions
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-7.png" />
+</p>
+
+<ul>
+  <li>방금 내가 설치한 버전이 있는것을 확인할 수 있다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-8.png" />
+</p>
+
+<ul>
+  <li>이제 해당 버전을 전역으로 설정해주자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv global 2.6.9
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-9.png" />
+</p>
+<center>global 대신 local을 써서 특정 디렉토리에만 버전을 구분 할 수 있다.</center>
+<center>나의 경우는 루비 버전을 굳이 따로 써야 할 일이 없기때문에 일단 전역으로 설정한다.</center>
+
+<ul>
+  <li>그리고 ~/.zshrc에 rbenv의 내용을 반영해주어야 한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code ~/.zshrc
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-10.png" />
+</p>
+
+<ul>
+  <li>아래 내용을 복사해서 ~/.zshrc에 입력해주자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[ -d ~/.rbenv  ]] &amp;&amp; \
+export PATH=${HOME}/.rbenv/bin:${PATH} &amp;&amp; \
+eval "$(rbenv init -)"
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-11.png" />
+</p>
+<center>저장과 터미널 재시작을 꼭 잊지말자!</center>
+
+<ul>
+  <li>그 다음으로 bundler를 설치한다. 사실상 다 왔다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-12.png" />
+</p>
+<center>여기서 본인이 jekyll 프로젝트를 새로 시작하고 싶다면 같은 방법으로 'jekyll'도 설치해주자.</center>
+<center>나는 이미 있는 테마를 fork해서 사용할 것이기 때문에 따로 설치하지 않았다.</center>
+
+<ul>
+  <li>gem으로 무언가 설치했을때 rehash를 해주어야 한다고 한다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-13.png" />
+</p>
+<center>그런데, 사실 최근 버전들에선 안해도 된다고 하더라!</center>
+<center>이젠 gem으로 무언가가 추가, 삭제 되면 자동으로 rehash가 된다고 한다.</center>
+<center>이 TMI를 풀기 위해서 난 해주었다.</center>
+
+<ul>
+  <li>블로그 프로젝트가 있는 폴더에서 bundler install을 해주자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundler install
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-14.png" />
+</p>
+<center>나는 minimal mistakes 테마를 fork해서 폴더를 만들어놨다.</center>
+<center>그 폴더 안에서 bundler install을 통해 해당 블로그 테마에서 필요한 gem들을 한번 설치해주어야 한다.</center>
+<center>앞으로 포스팅을 하고, 디테일한 부분들을 변경할 땐 install을 따로 해주지 않아도 괜찮다.</center>
+<center>아마 대부분의 사람이 환경설정을 다시 하지 않는 한 다시 할 일이 없을 것이다.</center>
+
+<ul>
+  <li>install이 완료된 모습이다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-15.png" />
+</p>
+
+<ul>
+  <li>이젠 로컬에서 실제로 구동해보자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-16.png" />
+</p>
+
+<ul>
+  <li>이렇게 뜨면 잘 된 것이다.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-20-jekyll/jekyll-2022-02-20-17.png" />
+</p>
+<center>Server address에 써있는 주소로 들어가보자. 블로그를 확인해 볼 수 있다.</center>
+<center>끝이다!</center>
+
+<blockquote>
+  <h3 id="참고로">참고로</h3>
+
+  <p>github에 올릴땐 serve한 상태로 올리면 안된다.
+<code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code>해서 빌드를 해서 올리자.
+serve한 상태로 올리면 로컬 환경에서 구동된다고 설정되어 있어서
+링크가 로컬 주소를 갖게되는 현상이 발생한다.</p>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#%EC%A7%80%ED%82%AC" class="page__taxonomy-item-tag" rel="tag">지킬</a><span class="sep"> </span>
+    
+      
+      
+      <a href="/tags/#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95" class="page__taxonomy-item-tag" rel="tag">환경설정</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#%EB%A7%A5-os" class="page__taxonomy-item p-category" rel="tag">맥 OS</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업로드:</strong> <time class="dt-published" datetime="2022-02-20T00:00:00+09:00">2022-02-20</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/%EB%A7%A5%20os/Mac-OS-settings-4/" class="pagination--pager" title="M1 맥 개발환경 설정 - (4) 안드로이드 스튜디오 설치
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 DANU. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-159385022-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+extensions: ["tex2jax.js"],
+jax: ["input/TeX", "output/HTML-CSS"],
+TeX: {
+  equationNumbers: {
+    autoNumber: "AMS"
+  }
+},
+tex2jax: {
+inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+processEscapes: true
+},
+"HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+
+  </body>
+</html>

@@ -22,4 +22,10 @@ var store = [{
         "tags": ["환경설정","안드로이드"],
         "url": "/%EB%A7%A5%20os/Mac-OS-settings-4/",
         "teaser": null
+      },{
+        "title": "M1 맥 개발환경 설정 - (5) Jekyll 환경설정",
+        "excerpt":"서론 M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다. Jekyll 환경설정 이 블로그는 Jekyll의 아주 유명한 테마인 Minimal Mistakes로 만들어졌다. 그리고...","categories": ["맥 OS"],
+        "tags": ["환경설정","지킬"],
+        "url": "/%EB%A7%A5%20os/Mac-OS-settings-5/",
+        "teaser": null
       }]
