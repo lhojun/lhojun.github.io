@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://danu.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danu.dev/" rel="alternate" type="text/html" /><updated>2022-03-21T14:41:51+09:00</updated><id>https://danu.dev/feed.xml</id><title type="html">DANU Dev</title><subtitle>DANU's Devlog</subtitle><author><name>이단우</name></author><entry><title type="html">M1 맥 개발환경 설정 - (5) Jekyll 환경설정</title><link href="https://danu.dev/macos/Mac-OS-settings-5/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (5) Jekyll 환경설정" /><published>2022-02-20T00:00:00+09:00</published><updated>2022-02-20T00:00:00+09:00</updated><id>https://danu.dev/macos/Mac-OS-settings-5</id><content type="html" xml:base="https://danu.dev/macos/Mac-OS-settings-5/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://danu.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danu.dev/" rel="alternate" type="text/html" /><updated>2022-03-21T19:56:37+09:00</updated><id>https://danu.dev/feed.xml</id><title type="html">DANU Dev</title><subtitle>DANU's Devlog</subtitle><author><name>이단우</name></author><entry><title type="html">M1 맥 개발환경 설정 - (5) Jekyll 환경설정</title><link href="https://danu.dev/macos/Mac-OS-settings-5/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (5) Jekyll 환경설정" /><published>2022-02-20T00:00:00+09:00</published><updated>2022-02-20T00:00:00+09:00</updated><id>https://danu.dev/macos/Mac-OS-settings-5</id><content type="html" xml:base="https://danu.dev/macos/Mac-OS-settings-5/">&lt;blockquote&gt;
   &lt;h2 id=&quot;서론&quot;&gt;서론&lt;/h2&gt;
 
   &lt;p&gt;M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.&lt;/p&gt;
@@ -12,8 +12,8 @@
   &lt;p&gt;Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!&lt;/p&gt;
 
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;/macOS/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;/macOS/Mac-OS-settings-2&quot;&gt;M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정&lt;/a&gt;&lt;br /&gt;
+    &lt;li&gt;&lt;a href=&quot;/macos/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/macos/Mac-OS-settings-2&quot;&gt;M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정&lt;/a&gt;&lt;br /&gt;
 * iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
@@ -317,7 +317,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;p&gt;Homebrew가 안깔려있다면 꼭 아래 글을 보고 깔고 오자!&lt;/p&gt;
 
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;/macOS/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/macos/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
 
@@ -749,8 +749,8 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;p&gt;Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!&lt;/p&gt;
 
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;/macOS/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;/macOS/Mac-OS-settings-2&quot;&gt;M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/macos/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/macos/Mac-OS-settings-2&quot;&gt;M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
 
