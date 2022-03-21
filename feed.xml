@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://danu.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danu.dev/" rel="alternate" type="text/html" /><updated>2022-02-21T21:13:44+09:00</updated><id>https://danu.dev/feed.xml</id><title type="html">DANU Dev</title><subtitle>DANU's Devlog</subtitle><author><name>이단우</name></author><entry><title type="html">M1 맥 개발환경 설정 - (5) Jekyll 환경설정</title><link href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (5) Jekyll 환경설정" /><published>2022-02-20T00:00:00+09:00</published><updated>2022-02-20T00:00:00+09:00</updated><id>https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5</id><content type="html" xml:base="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://danu.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danu.dev/" rel="alternate" type="text/html" /><updated>2022-03-21T14:25:21+09:00</updated><id>https://danu.dev/feed.xml</id><title type="html">DANU Dev</title><subtitle>DANU's Devlog</subtitle><author><name>이단우</name></author><entry><title type="html">M1 맥 개발환경 설정 - (5) Jekyll 환경설정</title><link href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (5) Jekyll 환경설정" /><published>2022-02-20T00:00:00+09:00</published><updated>2022-02-20T00:00:00+09:00</updated><id>https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5</id><content type="html" xml:base="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/">&lt;blockquote&gt;
   &lt;h2 id=&quot;서론&quot;&gt;서론&lt;/h2&gt;
 
   &lt;p&gt;M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.&lt;/p&gt;
@@ -12,8 +12,8 @@
   &lt;p&gt;Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!&lt;/p&gt;
 
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;/맥 OS/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;/맥 OS/Mac-OS-settings-2&quot;&gt;M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정&lt;/a&gt;&lt;br /&gt;
+    &lt;li&gt;&lt;a href=&quot;/맥 os/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/맥 os/Mac-OS-settings-2&quot;&gt;M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정&lt;/a&gt;&lt;br /&gt;
 * iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
@@ -196,10 +196,17 @@ eval &quot;$(rbenv init -)&quot;
 &lt;blockquote&gt;
   &lt;h3 id=&quot;참고로&quot;&gt;참고로&lt;/h3&gt;
 
-  &lt;p&gt;github에 올릴땐 serve한 상태로 올리면 안된다.
+  &lt;p&gt;github에 올릴땐 serve한 상태로 올리면 안된다.&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll build&lt;/code&gt;해서 빌드를 해서 올리자.
-serve한 상태로 올리면 로컬 환경에서 구동된다고 설정되어 있어서
+serve한 상태로 올리면 로컬 환경에서 구동된다고 설정되어 있어서&lt;br /&gt;
 링크가 로컬 주소를 갖게되는 현상이 발생한다.&lt;/p&gt;
+
+  &lt;p&gt;그리고, google analytics를 활성화 시키는 과정에서 알게 된 것인데,&lt;br /&gt;
+이 테마만 그런건지 모르겠으나, (아마 대부분 그렇겠지?)&lt;br /&gt;
+google analytics가 production일때만 활성화되어있게 설정되어 있기 때문에&lt;br /&gt;
+google analytics를 추가한 이후론&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JEKYLL_ENV=production bundle exec jekyll build&lt;/code&gt;를 통해 빌드를 해서 그 파일을 올려야한다.&lt;br /&gt;
+아마 빌드 옵션을 미리 설정할 수 있는 곳이 있을텐데.. 찾기 귀찮으니까 찾으면 다시 수정하는걸로&lt;/p&gt;
 &lt;/blockquote&gt;</content><author><name>이단우</name></author><category term="맥 OS" /><category term="환경설정" /><category term="지킬" /><summary type="html">서론 M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다. Jekyll 환경설정 이 블로그는 Jekyll의 아주 유명한 테마인 Minimal Mistakes로 만들어졌다. 그리고 공부하는 식빵맘님의 글을 참고해서 카테고리와 태그를 만들었다. 카테고리와 태그는 저 분의 글에서 너무 잘 정리되어있고, 나는 Jekyll 로컬 개발 환경을 구축하는 글을 정리해두려고 한다. 이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다. Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자! M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치 M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정 * iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!</summary></entry><entry><title type="html">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</title><link href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/" rel="alternate" type="text/html" title="M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1</id><content type="html" xml:base="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-1/">&lt;blockquote&gt;
   &lt;h2 id=&quot;서론&quot;&gt;서론&lt;/h2&gt;
 
@@ -310,7 +317,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;p&gt;Homebrew가 안깔려있다면 꼭 아래 글을 보고 깔고 오자!&lt;/p&gt;
 
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;/맥 OS/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/맥 os/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
 
@@ -742,8 +749,8 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
   &lt;p&gt;Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!&lt;/p&gt;
 
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;/맥 OS/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;/맥 OS/Mac-OS-settings-2&quot;&gt;M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/맥 os/Mac-OS-settings-1&quot;&gt;M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;/맥 os/Mac-OS-settings-2&quot;&gt;M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
 
@@ -753,9 +760,19 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;p align=&quot;center&quot;&gt;
 &lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-1.png&quot; /&gt;
 &lt;/p&gt;
-&lt;center&gt;바로 Xcode 설치(앱스토어에서)와, 시뮬레이터(에뮬레이터) 다운로드이다.&lt;/center&gt;
-&lt;center&gt;이 두가지가 이 모든 과정 진행시간의 90%이기 때문에 먼저 진행한다.&lt;/center&gt;
+&lt;center&gt;바로 Xcode 설치(앱스토어에서)와, Command Line Tools 적용, 시뮬레이터(에뮬레이터) 다운로드이다.&lt;/center&gt;
+&lt;center&gt;그 중에서도 Xcode 설치, 에뮬레이터 다운로드 이 두 가지가 이 모든 과정 진행시간의 90%이기 때문에 먼저 진행한다.&lt;/center&gt;
 &lt;center&gt;Xcode를 다운로드 후 실행하면 나오는 이 화면에서 커맨드(⌘ Command) 키와 쉼표(,)키를 눌러서 설정으로 가주자.&lt;/center&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Command Line Tools를 설정해주자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-1-1.png&quot; /&gt;
+&lt;/p&gt;
+&lt;center&gt;열린 설정창에서 Locations 탭으로 가면 하단에 Command Line Tools를 설정하는 곳이 있다.&lt;/center&gt;
+&lt;center&gt;원래는 텅 비어있을것이다. Xcode를 설치했다면 선택할 수 있는 버전이 있을테니 선택해주자.&lt;/center&gt;
+&lt;center&gt;이거 빼먹으면 뒤에서 제대로 되는게 없을 것이니 꼭 꼭 잊지말고 해주자!&lt;/center&gt;
 
 &lt;ul&gt;
   &lt;li&gt;에뮬레이터를 다운로드하자.&lt;/li&gt;
@@ -763,7 +780,7 @@ PATH에 Homebrew를 추가하기 위한 작업이다.&lt;br /&gt;
 &lt;p align=&quot;center&quot;&gt;
 &lt;img src=&quot;/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-2.png&quot; /&gt;
 &lt;/p&gt;
-&lt;center&gt;열린 설정 창에서 Components탭으로 가면 에뮬레이터를 깔 수 있다.&lt;/center&gt;
+&lt;center&gt;이번엔 Components탭으로 가면 에뮬레이터를 깔 수 있다.&lt;/center&gt;
 &lt;center&gt;나 같은 경우는 이미 환경설정이 완료된 상태에서 다 지우고 다시 하는 것이기 때문에 이미 15.0 버전이 깔려있다.&lt;/center&gt;
 &lt;center&gt;차마 시뮬레이터까지 다시 깔기는 너무 귀찮았다.&lt;/center&gt;
 &lt;center&gt;아무튼 좌측의 다운로드 아이콘을 눌러 다운로드를 진행해두고 아래 과정을 진행하자!&lt;/center&gt;
