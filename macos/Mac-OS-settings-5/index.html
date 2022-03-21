@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="DANU Dev">
 <meta property="og:title" content="M1 맥 개발환경 설정 - (5) Jekyll 환경설정">
-<meta property="og:url" content="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/">
+<meta property="og:url" content="https://danu.dev/macos/Mac-OS-settings-5/">
 
 
   <meta property="og:description" content="서론    M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.    Jekyll 환경설정    이 블로그는 Jekyll의 아주 유명한 테마인 Minimal Mistakes로 만들어졌다. 그리고 공부하는 식빵맘님의 글을 참고해서 카테고리와 태그를 만들었다. 카테고리와 태그는 저 분의 글에서 너무 잘 정리되어있고, 나는 Jekyll 로컬 개발 환경을 구축하는 글을 정리해두려고 한다.    이 글은 아래 두 가지 과정을 진행했다는 가정하에 진행된다.    Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!         M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치     M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정 * iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!">
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/">
+<link rel="canonical" href="https://danu.dev/macos/Mac-OS-settings-5/">
 
 
 
@@ -264,52 +264,46 @@
 
 <nav class="nav__list">
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">카테고리</label>
+  <label for="ac-toc"></label>
   <ul class="nav__items" id="category_tag_menu">
-      <!--전체 글 수-->
+    <!--전체 글 수-->
+    <ul>
+      <li>
+        <a href="/categories/" class="">전체(5)</a>
+      </li>
+    </ul>
+    <li>
+      <span class="nav__sub-title">개발</span>
+      <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
       <ul>
-      <li>
-            <a href="/categories/" class="">전체(5)</a>
-      </li>
+          
       </ul>
-      <li>
-        <span class="nav__sub-title">개발</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
-            <ul>
-                
-                    
-                
-            </ul>
-            <ul>
-                
-                    
-                        <li><a href="/categories/macos" class="">맥 OS (5)</a></li>
-                    
-                
-            </ul>
-      </li>
-      <li>
-        <span class="nav__sub-title">연구</span>
-            <ul>
-                
-                    
-                
-            </ul>
-            <ul>
-                
-                    
-                
-            </ul>
-      </li>
-      <li>
-        <span class="nav__sub-title">일상</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
-            <ul>
-                
-                    
-                
-            </ul>
-      </li>
+      <ul>
+         
+        <li>
+          <a href="/categories/macos" class=""
+            >맥 OS (5)</a
+          >
+        </li>
+         
+      </ul>
+    </li>
+    <li>
+      <span class="nav__sub-title">연구</span>
+      <ul>
+          
+      </ul>
+      <ul>
+          
+      </ul>
+    </li>
+    <li>
+      <span class="nav__sub-title">일상</span>
+      <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+      <ul>
+          
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -329,7 +323,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-5/" class="u-url" itemprop="url">M1 맥 개발환경 설정 - (5) Jekyll 환경설정
+            <a href="https://danu.dev/macos/Mac-OS-settings-5/" class="u-url" itemprop="url">M1 맥 개발환경 설정 - (5) Jekyll 환경설정
 </a>
           </h1>
           
@@ -354,8 +348,8 @@
   <p>Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!</p>
 
   <ul>
-    <li><a href="/맥 os/Mac-OS-settings-1">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</a></li>
-    <li><a href="/맥 os/Mac-OS-settings-2">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</a><br />
+    <li><a href="/macOS/Mac-OS-settings-1">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</a></li>
+    <li><a href="/macOS/Mac-OS-settings-2">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</a><br />
 * iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!</li>
   </ul>
 </blockquote>
@@ -592,7 +586,7 @@ google analytics를 추가한 이후론<br />
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#%EB%A7%A5-os" class="page__taxonomy-item p-category" rel="tag">맥 OS</a>
+      <a href="/categories/#macos" class="page__taxonomy-item p-category" rel="tag">macOS</a>
     
     </span>
   </p>
@@ -609,7 +603,7 @@ google analytics를 추가한 이후론<br />
       
   <nav class="pagination">
     
-      <a href="/%EB%A7%A5%20os/Mac-OS-settings-4/" class="pagination--pager" title="M1 맥 개발환경 설정 - (4) 안드로이드 스튜디오 설치
+      <a href="/macos/Mac-OS-settings-4/" class="pagination--pager" title="M1 맥 개발환경 설정 - (4) 안드로이드 스튜디오 설치
 ">이전</a>
     
     

@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="DANU Dev">
 <meta property="og:title" content="M1 맥 개발환경 설정 - (4) 안드로이드 스튜디오 설치">
-<meta property="og:url" content="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-4/">
+<meta property="og:url" content="https://danu.dev/macos/Mac-OS-settings-4/">
 
 
   <meta property="og:description" content="서론    M1 Pro가 탑재된 2021 맥북프로 16’를 구매해서, 환경설정을 다시 할 필요성이 있었다. 이전 M1 맥북에어 환경설정을 할 땐 이리저리 충돌난걸 ‘야매’로 고쳐서 겨우겨우 돌아가게 한 것들이 많았기 때문에 이번 기회에 깔끔하게 설치도 해보고, 그 기록을 남기고자 한다.    안드로이드 스튜디오 설치    최근 뜬금없이 안드로이드 앱 외주를 맡게 되었기 때문에 안드로이드 스튜디오를 깔 일이 생겼다. 리액트 네이티브 앱을 한창 개발 할 당시에는 인텔 맥을 쓰고 있어서 안드로이드 스튜디오를 까는 것이 신경쓰이는 일이 전혀 아니었는데, M1 맥 출시 초기에는 안드로이드 스튜디오가 지원이 안되는 치명적인 문제가 있었다. 그리고 그 뒤엔 어떤 개발자분께서 만든 M1 맥에서 돌아가는 버전을 썼는데 지금은 많은 개발자님들의 노고덕분에 아주 간단하게 설치할 수 있게 되었으니 빠르게 설치해보도록 하자!">
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-4/">
+<link rel="canonical" href="https://danu.dev/macos/Mac-OS-settings-4/">
 
 
 
@@ -264,52 +264,46 @@
 
 <nav class="nav__list">
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">카테고리</label>
+  <label for="ac-toc"></label>
   <ul class="nav__items" id="category_tag_menu">
-      <!--전체 글 수-->
+    <!--전체 글 수-->
+    <ul>
+      <li>
+        <a href="/categories/" class="">전체(5)</a>
+      </li>
+    </ul>
+    <li>
+      <span class="nav__sub-title">개발</span>
+      <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
       <ul>
-      <li>
-            <a href="/categories/" class="">전체(5)</a>
-      </li>
+          
       </ul>
-      <li>
-        <span class="nav__sub-title">개발</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
-            <ul>
-                
-                    
-                
-            </ul>
-            <ul>
-                
-                    
-                        <li><a href="/categories/macos" class="">맥 OS (5)</a></li>
-                    
-                
-            </ul>
-      </li>
-      <li>
-        <span class="nav__sub-title">연구</span>
-            <ul>
-                
-                    
-                
-            </ul>
-            <ul>
-                
-                    
-                
-            </ul>
-      </li>
-      <li>
-        <span class="nav__sub-title">일상</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
-            <ul>
-                
-                    
-                
-            </ul>
-      </li>
+      <ul>
+         
+        <li>
+          <a href="/categories/macos" class=""
+            >맥 OS (5)</a
+          >
+        </li>
+         
+      </ul>
+    </li>
+    <li>
+      <span class="nav__sub-title">연구</span>
+      <ul>
+          
+      </ul>
+      <ul>
+          
+      </ul>
+    </li>
+    <li>
+      <span class="nav__sub-title">일상</span>
+      <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+      <ul>
+          
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -329,7 +323,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://danu.dev/%EB%A7%A5%20os/Mac-OS-settings-4/" class="u-url" itemprop="url">M1 맥 개발환경 설정 - (4) 안드로이드 스튜디오 설치
+            <a href="https://danu.dev/macos/Mac-OS-settings-4/" class="u-url" itemprop="url">M1 맥 개발환경 설정 - (4) 안드로이드 스튜디오 설치
 </a>
           </h1>
           
@@ -465,7 +459,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#%EB%A7%A5-os" class="page__taxonomy-item p-category" rel="tag">맥 OS</a>
+      <a href="/categories/#macos" class="page__taxonomy-item p-category" rel="tag">macOS</a>
     
     </span>
   </p>
@@ -482,11 +476,11 @@
       
   <nav class="pagination">
     
-      <a href="/%EB%A7%A5%20os/Mac-OS-settings-3/" class="pagination--pager" title="M1 맥 개발환경 설정 - (3) React Native 개발 환경 설정
+      <a href="/macos/Mac-OS-settings-3/" class="pagination--pager" title="M1 맥 개발환경 설정 - (3) React Native 개발 환경 설정
 ">이전</a>
     
     
-      <a href="/%EB%A7%A5%20os/Mac-OS-settings-5/" class="pagination--pager" title="M1 맥 개발환경 설정 - (5) Jekyll 환경설정
+      <a href="/macos/Mac-OS-settings-5/" class="pagination--pager" title="M1 맥 개발환경 설정 - (5) Jekyll 환경설정
 ">다음</a>
     
   </nav>
