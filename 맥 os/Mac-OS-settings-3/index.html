@@ -354,8 +354,8 @@
   <p>Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!</p>
 
   <ul>
-    <li><a href="/맥 OS/Mac-OS-settings-1">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</a></li>
-    <li><a href="/맥 OS/Mac-OS-settings-2">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</a></li>
+    <li><a href="/맥 os/Mac-OS-settings-1">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</a></li>
+    <li><a href="/맥 os/Mac-OS-settings-2">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</a></li>
   </ul>
 </blockquote>
 
@@ -365,9 +365,19 @@
 <p align="center">
 <img src="/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-1.png" />
 </p>
-<center>바로 Xcode 설치(앱스토어에서)와, 시뮬레이터(에뮬레이터) 다운로드이다.</center>
-<center>이 두가지가 이 모든 과정 진행시간의 90%이기 때문에 먼저 진행한다.</center>
+<center>바로 Xcode 설치(앱스토어에서)와, Command Line Tools 적용, 시뮬레이터(에뮬레이터) 다운로드이다.</center>
+<center>그 중에서도 Xcode 설치, 에뮬레이터 다운로드 이 두 가지가 이 모든 과정 진행시간의 90%이기 때문에 먼저 진행한다.</center>
 <center>Xcode를 다운로드 후 실행하면 나오는 이 화면에서 커맨드(⌘ Command) 키와 쉼표(,)키를 눌러서 설정으로 가주자.</center>
+
+<ul>
+  <li>Command Line Tools를 설정해주자.</li>
+</ul>
+<p align="center">
+<img src="/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-1-1.png" />
+</p>
+<center>열린 설정창에서 Locations 탭으로 가면 하단에 Command Line Tools를 설정하는 곳이 있다.</center>
+<center>원래는 텅 비어있을것이다. Xcode를 설치했다면 선택할 수 있는 버전이 있을테니 선택해주자.</center>
+<center>이거 빼먹으면 뒤에서 제대로 되는게 없을 것이니 꼭 꼭 잊지말고 해주자!</center>
 
 <ul>
   <li>에뮬레이터를 다운로드하자.</li>
@@ -375,7 +385,7 @@
 <p align="center">
 <img src="/assets/images/2022-02-19-react-native-install/react-native-install-2022-02-19-2.png" />
 </p>
-<center>열린 설정 창에서 Components탭으로 가면 에뮬레이터를 깔 수 있다.</center>
+<center>이번엔 Components탭으로 가면 에뮬레이터를 깔 수 있다.</center>
 <center>나 같은 경우는 이미 환경설정이 완료된 상태에서 다 지우고 다시 하는 것이기 때문에 이미 15.0 버전이 깔려있다.</center>
 <center>차마 시뮬레이터까지 다시 깔기는 너무 귀찮았다.</center>
 <center>아무튼 좌측의 다운로드 아이콘을 눌러 다운로드를 진행해두고 아래 과정을 진행하자!</center>

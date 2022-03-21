@@ -354,8 +354,8 @@
   <p>Homebrew와 iTerm2가 안깔려있다면 꼭 아래 글들을 보고 깔고 오자!</p>
 
   <ul>
-    <li><a href="/맥 OS/Mac-OS-settings-1">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</a></li>
-    <li><a href="/맥 OS/Mac-OS-settings-2">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</a><br />
+    <li><a href="/맥 os/Mac-OS-settings-1">M1 맥 개발환경 설정 - (1) 홈브루(Homebrew) 설치</a></li>
+    <li><a href="/맥 os/Mac-OS-settings-2">M1 맥 개발환경 설정 - (2) iTerm2 설치 및 설정</a><br />
 * iTerm2는 필수는 아니다! 맥의 기본 터미널에서 진행해도 똑같다!</li>
   </ul>
 </blockquote>
@@ -538,10 +538,17 @@ eval "$(rbenv init -)"
 <blockquote>
   <h3 id="참고로">참고로</h3>
 
-  <p>github에 올릴땐 serve한 상태로 올리면 안된다.
+  <p>github에 올릴땐 serve한 상태로 올리면 안된다.<br />
 <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code>해서 빌드를 해서 올리자.
-serve한 상태로 올리면 로컬 환경에서 구동된다고 설정되어 있어서
+serve한 상태로 올리면 로컬 환경에서 구동된다고 설정되어 있어서<br />
 링크가 로컬 주소를 갖게되는 현상이 발생한다.</p>
+
+  <p>그리고, google analytics를 활성화 시키는 과정에서 알게 된 것인데,<br />
+이 테마만 그런건지 모르겠으나, (아마 대부분 그렇겠지?)<br />
+google analytics가 production일때만 활성화되어있게 설정되어 있기 때문에<br />
+google analytics를 추가한 이후론<br />
+<code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production bundle exec jekyll build</code>를 통해 빌드를 해서 그 파일을 올려야한다.<br />
+아마 빌드 옵션을 미리 설정할 수 있는 곳이 있을텐데.. 찾기 귀찮으니까 찾으면 다시 수정하는걸로</p>
 </blockquote>
 
         
