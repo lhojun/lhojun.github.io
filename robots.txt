@@ -1,1 +1,3 @@
-Sitemap: https://danu.dev/sitemap.xml
+User-agent: *
+Allow:/
+Sitemap : https://danu.dev/sitemap.xml
